@@ -1,24 +1,24 @@
 /**
-  @Generated PIC10 / PIC12 / PIC16 / PIC18 MCUs Header File
+  PWM3 Generated Driver File
 
-  @Company:
+  @Company
     Microchip Technology Inc.
 
-  @File Name:
-    mcc.c
+  @File Name
+    pwm3.c
 
-  @Summary:
-    This is the device_config.h file generated using PIC10 / PIC12 / PIC16 / PIC18 MCUs
+  @Summary
+    This is the generated driver implementation file for the PWM3 driver using PIC10 / PIC12 / PIC16 / PIC18 MCUs
 
-  @Description:
-    This header file provides implementations for driver APIs for all modules selected in the GUI.
+  @Description
+    This source file provides implementations for driver APIs for PWM3.
     Generation Information :
         Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.76
         Device            :  PIC16F18446
-        Driver Version    :  2.00
+        Driver Version    :  2.01
     The generated drivers are tested against the following:
-        Compiler          :  XC8 2.00 or later
-        MPLAB             :  MPLAB X 5.10
+        Compiler          :  XC8 2.00
+         MPLAB 	          :  MPLAB X 5.10
 */
 
 /*
@@ -44,12 +44,65 @@
     SOFTWARE.
 */
 
-#ifndef DEVICE_CONFIG_H
-#define	DEVICE_CONFIG_H
+/**
+  Section: Included Files
+*/
 
-#define _XTAL_FREQ 32000000
+#include <xc.h>
+#include "pwm3.h"
 
-#endif	/* DEVICE_CONFIG_H */
+/**
+  Section: Macro Declarations
+*/
+
+#define PWM3_INITIALIZE_DUTY_VALUE    0
+
+/**
+  Section: PWM Module APIs
+*/
+
+void PWM3_Initialize(void)
+{
+    // Set the PWM3 to the options selected in the User Interface
+	
+	// MODE PWM; EN enabled; FMT right_aligned; 
+	CCP3CON = 0x8C;    
+	
+	// RH 0; 
+	CCPR3H = 0x00;    
+	
+	// RL 0; 
+	CCPR3L = 0x00;    
+
+	// Selecting Timer 2
+	CCPTMRS0bits.C3TSEL = 0x1;
+    
+}
+
+void PWM3_LoadDutyValue(uint16_t dutyValue)
+{
+    dutyValue &= 0x03FF;
+    
+    // Load duty cycle value
+    if(CCP3CONbits.FMT)
+    {
+        dutyValue <<= 6;
+        CCPR3H = dutyValue >> 8;
+        CCPR3L = dutyValue;
+    }
+    else
+    {
+        CCPR3H = dutyValue >> 8;
+        CCPR3L = dutyValue;
+    }
+}
+
+bool PWM3_OutputStatusGet(void)
+{
+    // Returns the output status
+    return(CCP3CONbits.OUT);
+}
 /**
  End of File
 */
+

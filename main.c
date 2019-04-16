@@ -46,13 +46,15 @@
 
 #include "mcc_generated_files/mcc.h"
 #include "PWM.h"
+#include "clock.h"
+#include "TM1650.h"
 
 int dmxPointer = 0;
 uint8_t dmxFrame[514];
 
 //This interrupt check for overrun error and allows debugging. Then checks for framing error.
 //The framing error indicates the end of the possible adresses. This then reads the data
-//and puts it into the array. This function sets the the third element as the first address avalible. sdlkfnsoidfnsdi
+//and puts it into the array. This function sets the the third element as the first address avalible.
 void dmx_isr(void) {
     if(RC1STAbits.OERR){
         RC1STAbits.CREN = 0;
@@ -68,30 +70,64 @@ void dmx_isr(void) {
    
 }
 
+
+
+void Blink1() {
+    static bool value = 0;
+    static time_t lastTime = 0;
+    
+    time_t time = CLOCK_getTime();
+    if(time <= lastTime + 237)
+        return;
+    
+    lastTime = time;
+    value = !value;
+    
+    if(value)
+        TM1650_setDigit(0, '8', 0);
+    else
+        TM1650_setDigit(0, ' ', 0);
+    
+}
+
+void Blink2() {
+    static bool value = 0;
+    static time_t lastTime = 0;
+    
+    time_t time = CLOCK_getTime();
+    if(time <= lastTime + 100)
+        return;
+    
+    lastTime = time;
+    value = !value;
+    
+    if(value)
+        TM1650_setDigit(1, '7', 0);
+    else
+        TM1650_setDigit(1, ' ', 0);
+    
+}
 /*
                          Main application
  */
 
-//This main function calls inits and then sets the color in a while loop.
 void main(void)
 {
     // initialize the device
     SYSTEM_Initialize();
-    
+    CLOCK_init();
+ 
     EUSART1_SetRxInterruptHandler(dmx_isr);
-    LED_init();
-
-    // Enable the Global Interrupts
     INTERRUPT_GlobalInterruptEnable();
 
-    // Enable the Peripheral Interrupts
     INTERRUPT_PeripheralInterruptEnable();
+    
+    TM1650_init();
     
     while (1)
     {
-        //Addresses 2-5 are used because 0 and 1 are the framing error and start byte.
-           LED_setColor(dmxFrame[2],dmxFrame[3],dmxFrame[4],dmxFrame[5]);
-           
+           Blink1();
+           Blink2();
     }
 }
 /**

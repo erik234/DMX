@@ -1,24 +1,24 @@
 /**
-  @Generated PIC10 / PIC12 / PIC16 / PIC18 MCUs Header File
+  PWM4 Generated Driver File
 
-  @Company:
+  @Company
     Microchip Technology Inc.
 
-  @File Name:
-    mcc.c
+  @File Name
+    pwm4.c
 
-  @Summary:
-    This is the device_config.h file generated using PIC10 / PIC12 / PIC16 / PIC18 MCUs
+  @Summary
+    This is the generated driver implementation file for the PWM4 driver using PIC10 / PIC12 / PIC16 / PIC18 MCUs
 
-  @Description:
-    This header file provides implementations for driver APIs for all modules selected in the GUI.
+  @Description
+    This source file provides implementations for driver APIs for PWM4.
     Generation Information :
         Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.76
         Device            :  PIC16F18446
-        Driver Version    :  2.00
+        Driver Version    :  2.01
     The generated drivers are tested against the following:
-        Compiler          :  XC8 2.00 or later
-        MPLAB             :  MPLAB X 5.10
+        Compiler          :  XC8 2.00
+         MPLAB 	          :  MPLAB X 5.10
 */
 
 /*
@@ -44,12 +44,65 @@
     SOFTWARE.
 */
 
-#ifndef DEVICE_CONFIG_H
-#define	DEVICE_CONFIG_H
+/**
+  Section: Included Files
+*/
 
-#define _XTAL_FREQ 32000000
+#include <xc.h>
+#include "pwm4.h"
 
-#endif	/* DEVICE_CONFIG_H */
+/**
+  Section: Macro Declarations
+*/
+
+#define PWM4_INITIALIZE_DUTY_VALUE    0
+
+/**
+  Section: PWM Module APIs
+*/
+
+void PWM4_Initialize(void)
+{
+    // Set the PWM4 to the options selected in the User Interface
+	
+	// MODE PWM; EN enabled; FMT right_aligned; 
+	CCP4CON = 0x8C;    
+	
+	// RH 0; 
+	CCPR4H = 0x00;    
+	
+	// RL 0; 
+	CCPR4L = 0x00;    
+
+	// Selecting Timer 2
+	CCPTMRS0bits.C4TSEL = 0x1;
+    
+}
+
+void PWM4_LoadDutyValue(uint16_t dutyValue)
+{
+    dutyValue &= 0x03FF;
+    
+    // Load duty cycle value
+    if(CCP4CONbits.FMT)
+    {
+        dutyValue <<= 6;
+        CCPR4H = dutyValue >> 8;
+        CCPR4L = dutyValue;
+    }
+    else
+    {
+        CCPR4H = dutyValue >> 8;
+        CCPR4L = dutyValue;
+    }
+}
+
+bool PWM4_OutputStatusGet(void)
+{
+    // Returns the output status
+    return(CCP4CONbits.OUT);
+}
 /**
  End of File
 */
+
