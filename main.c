@@ -52,7 +52,7 @@ uint8_t dmxFrame[514];
 
 //This interrupt check for overrun error and allows debugging. Then checks for framing error.
 //The framing error indicates the end of the possible adresses. This then reads the data
-//and puts it into the array. This function sets the the third element as the first address avalible.
+//and puts it into the array. This function sets the the third element as the first address avalible. sdlkfnsoidfnsdi
 void dmx_isr(void) {
     if(RC1STAbits.OERR){
         RC1STAbits.CREN = 0;
