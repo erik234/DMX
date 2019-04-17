@@ -4,6 +4,7 @@
  *
  * Created on April 16, 2019, 5:26 PM
  */
+#include <stdint.h>
 
 #ifndef CONTROLLER_H
 #define	CONTROLLER_H
@@ -18,7 +19,7 @@ void address_inc();
 void address_dec();
 void CONTROLLER_task();
 
-
+extern uint16_t address;
 
 #ifdef	__cplusplus
 }
