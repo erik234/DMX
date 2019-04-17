@@ -83,3 +83,17 @@ void clearDisplay(void){
     TM1650_setDigit(2 , 32, 0);
     TM1650_setDigit(3 , 32, 0);
 }
+
+void TM1650_fastPrintNum(uint16_t num){ 
+    
+    int arr[4];
+    
+    arr[3] = num % 10;
+    arr[2] = (num/10) % 10 ;
+    arr[1] = (num/100) % 10;
+    arr[0] = (num/1000) % 10;
+    
+    for(int i = 0; i < 4; i++){
+        TM1650_setDigit(i, arr[i] + 48, 0);
+    }
+}

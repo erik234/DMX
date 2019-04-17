@@ -48,6 +48,8 @@
 #include "PWM.h"
 #include "clock.h"
 #include "TM1650.h"
+#include "buttons.h"
+#include "controller.h"
 
 int dmxPointer = 0;
 uint8_t dmxFrame[514];
@@ -72,41 +74,7 @@ void dmx_isr(void) {
 
 
 
-void Blink1() {
-    static bool value = 0;
-    static time_t lastTime = 0;
-    
-    time_t time = CLOCK_getTime();
-    if(time <= lastTime + 237)
-        return;
-    
-    lastTime = time;
-    value = !value;
-    
-    if(value)
-        TM1650_setDigit(0, '8', 0);
-    else
-        TM1650_setDigit(0, ' ', 0);
-    
-}
 
-void Blink2() {
-    static bool value = 0;
-    static time_t lastTime = 0;
-    
-    time_t time = CLOCK_getTime();
-    if(time <= lastTime + 100)
-        return;
-    
-    lastTime = time;
-    value = !value;
-    
-    if(value)
-        TM1650_setDigit(1, '7', 0);
-    else
-        TM1650_setDigit(1, ' ', 0);
-    
-}
 /*
                          Main application
  */
@@ -123,13 +91,16 @@ void main(void)
     INTERRUPT_PeripheralInterruptEnable();
     
     TM1650_init();
-    
-    while (1)
+    BUTTONS_init();
+    CONTROLLER_init();
+    int i = 0;
+    while(1)
     {
-           Blink1();
-           Blink2();
+        BUTTONS_task();
+        CONTROLLER_task();
     }
 }
 /**
  End of File
+ * if (time - buttontime > 500) 
 */
