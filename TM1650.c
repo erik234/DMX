@@ -15,6 +15,7 @@
 
 //Variable that controls position on display
 static int TABVALUE;
+static bool isEnabled; 
 
 //Char  table that bit masks the raw char value to something that can be read on the display
 //Given by lab
@@ -39,7 +40,7 @@ static void writeData(uint8_t address, uint8_t data){
 //Uses the write data to send an init command
 //Also clears the display to prevent stuck letters from previous programs
 void TM1650_init(void){
-    writeData(0x24, 1);
+    TM1650_enable(1);
     clearDisplay();
     
 }
@@ -96,4 +97,20 @@ void TM1650_fastPrintNum(uint16_t num){
     for(int i = 0; i < 4; i++){
         TM1650_setDigit(i, arr[i] + 48, 0);
     }
+}
+
+//This will enable the display when a button is pressed
+void TM1650_enable(bool enable){
+    if(enable){ 
+         writeData(0x24, 1);
+         isEnabled = 1;
+    } else {
+         writeData(0x24, 0);
+         isEnabled = 0;
+    }
+}
+
+//Will check a variable and return a bool.
+bool TM1650_isEnabled(void) {
+    return isEnabled;
 }

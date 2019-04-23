@@ -90,7 +90,9 @@ void main(void)
 
     INTERRUPT_PeripheralInterruptEnable();
     
+    __delay_ms(500);
     TM1650_init();
+    
     BUTTONS_init();
     CONTROLLER_init();
     int i = 0;
@@ -105,5 +107,3 @@ void main(void)
  End of File
  * if (time - buttontime > 500) 
 */
-
-//Blah blah blah
