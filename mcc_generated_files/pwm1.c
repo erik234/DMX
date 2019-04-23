@@ -1,24 +1,24 @@
 /**
-  @Generated PIC10 / PIC12 / PIC16 / PIC18 MCUs Header File
+  PWM1 Generated Driver File
 
-  @Company:
+  @Company
     Microchip Technology Inc.
 
-  @File Name:
-    mcc.c
+  @File Name
+    pwm1.c
 
-  @Summary:
-    This is the device_config.h file generated using PIC10 / PIC12 / PIC16 / PIC18 MCUs
+  @Summary
+    This is the generated driver implementation file for the PWM1 driver using PIC10 / PIC12 / PIC16 / PIC18 MCUs
 
-  @Description:
-    This header file provides implementations for driver APIs for all modules selected in the GUI.
+  @Description
+    This source file provides implementations for driver APIs for PWM1.
     Generation Information :
         Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.76
         Device            :  PIC16F18446
-        Driver Version    :  2.00
+        Driver Version    :  2.01
     The generated drivers are tested against the following:
-        Compiler          :  XC8 2.00 or later
-        MPLAB             :  MPLAB X 5.10
+        Compiler          :  XC8 2.00
+         MPLAB 	          :  MPLAB X 5.10
 */
 
 /*
@@ -44,12 +44,65 @@
     SOFTWARE.
 */
 
-#ifndef DEVICE_CONFIG_H
-#define	DEVICE_CONFIG_H
+/**
+  Section: Included Files
+*/
 
-#define _XTAL_FREQ 32000000
+#include <xc.h>
+#include "pwm1.h"
 
-#endif	/* DEVICE_CONFIG_H */
+/**
+  Section: Macro Declarations
+*/
+
+#define PWM1_INITIALIZE_DUTY_VALUE    0
+
+/**
+  Section: PWM Module APIs
+*/
+
+void PWM1_Initialize(void)
+{
+    // Set the PWM1 to the options selected in the User Interface
+	
+	// MODE PWM; EN enabled; FMT right_aligned; 
+	CCP1CON = 0x8C;    
+	
+	// RH 0; 
+	CCPR1H = 0x00;    
+	
+	// RL 0; 
+	CCPR1L = 0x00;    
+
+	// Selecting Timer 2
+	CCPTMRS0bits.C1TSEL = 0x1;
+    
+}
+
+void PWM1_LoadDutyValue(uint16_t dutyValue)
+{
+    dutyValue &= 0x03FF;
+    
+    // Load duty cycle value
+    if(CCP1CONbits.FMT)
+    {
+        dutyValue <<= 6;
+        CCPR1H = dutyValue >> 8;
+        CCPR1L = dutyValue;
+    }
+    else
+    {
+        CCPR1H = dutyValue >> 8;
+        CCPR1L = dutyValue;
+    }
+}
+
+bool PWM1_OutputStatusGet(void)
+{
+    // Returns the output status
+    return(CCP1CONbits.OUT);
+}
 /**
  End of File
 */
+

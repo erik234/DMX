@@ -46,6 +46,10 @@
 
 #include "mcc_generated_files/mcc.h"
 #include "PWM.h"
+#include "clock.h"
+#include "TM1650.h"
+#include "buttons.h"
+#include "controller.h"
 
 int dmxPointer = 0;
 uint8_t dmxFrame[514];
@@ -68,32 +72,36 @@ void dmx_isr(void) {
    
 }
 
+
+
+
 /*
                          Main application
  */
 
-//This main function calls inits and then sets the color in a while loop.
 void main(void)
 {
     // initialize the device
     SYSTEM_Initialize();
-    
+    CLOCK_init();
+ 
     EUSART1_SetRxInterruptHandler(dmx_isr);
-    LED_init();
-
-    // Enable the Global Interrupts
     INTERRUPT_GlobalInterruptEnable();
 
-    // Enable the Peripheral Interrupts
     INTERRUPT_PeripheralInterruptEnable();
     
-    while (1)
+    TM1650_init();
+    BUTTONS_init();
+    CONTROLLER_init();
+    int i = 0;
+    while(1)
     {
-        //Addresses 2-5 are used because 0 and 1 are the framing error and start byte.
-           LED_setColor(dmxFrame[2],dmxFrame[3],dmxFrame[4],dmxFrame[5]);
-           
+        BUTTONS_task();
+        CONTROLLER_task();
+        LED_setColor(dmxFrame[address] , dmxFrame[address+1] , dmxFrame[address+2] , dmxFrame[address+3]);
     }
 }
 /**
  End of File
+ * if (time - buttontime > 500) 
 */
