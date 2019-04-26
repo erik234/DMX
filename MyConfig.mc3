@@ -21,12 +21,12 @@
          <string>class com.microchip.mcc.mcu8.interruptManager.InterruptManager</string>
       </entry>
       <entry>
-         <string>System Module</string>
-         <string>class com.microchip.mcc.mcu8.systemManager.SystemManager</string>
-      </entry>
-      <entry>
          <string>TMR0</string>
          <string>class com.microchip.mcc.mcu8.modules.tmr0_mid0.TMR0</string>
+      </entry>
+      <entry>
+         <string>System Module</string>
+         <string>class com.microchip.mcc.mcu8.systemManager.SystemManager</string>
       </entry>
       <entry>
          <string>INTERNAL OSCILLATOR</string>
@@ -37,28 +37,32 @@
          <string>class com.microchip.mcc.mcu8.systemManager.wwdt.WWDT</string>
       </entry>
       <entry>
-         <string>EUSART1</string>
-         <string>class com.microchip.mcc.mcu8.modules.eusart.EUSART</string>
-      </entry>
-      <entry>
          <string>CCP4</string>
          <string>class com.microchip.mcc.mcu8.modules.ccp.CCP</string>
+      </entry>
+      <entry>
+         <string>EUSART1</string>
+         <string>class com.microchip.mcc.mcu8.modules.eusart.EUSART</string>
       </entry>
       <entry>
          <string>CCP3</string>
          <string>class com.microchip.mcc.mcu8.modules.ccp.CCP</string>
       </entry>
       <entry>
+         <string>ADCC</string>
+         <string>class com.microchip.mcc.mcu8.modules.adcc.ADC</string>
+      </entry>
+      <entry>
          <string>CCP2</string>
+         <string>class com.microchip.mcc.mcu8.modules.ccp.CCP</string>
+      </entry>
+      <entry>
+         <string>CCP1</string>
          <string>class com.microchip.mcc.mcu8.modules.ccp.CCP</string>
       </entry>
       <entry>
          <string>TMR2</string>
          <string>class com.microchip.mcc.mcu8.modules.tmr2.TMR2</string>
-      </entry>
-      <entry>
-         <string>CCP1</string>
-         <string>class com.microchip.mcc.mcu8.modules.ccp.CCP</string>
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
@@ -96,6 +100,10 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="EUSART1" registerAlias="TXSTA" settingAlias="CSRC"/>
          <value>slave</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCON3" settingAlias="ADTMD" alias="enabled"/>
+         <value>7</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="ANSELB" settingAlias="ANSB5"/>
@@ -138,6 +146,10 @@
          <value>FOSC/4</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADCC" name="PrechargeMaxCount"/>
+         <value>8191</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="INLVLC" settingAlias="INLVLC3" alias="TTL_input"/>
          <value>0</value>
       </entry>
@@ -160,6 +172,10 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="EUSART1" registerAlias="BAUDCON" settingAlias="ABDEN" alias="enabled"/>
          <value>1</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCON2" settingAlias="ADMD" alias="Burst_average_mode"/>
+         <value>3</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="Pin Module" registerAlias="RC6PPS"/>
@@ -258,12 +274,12 @@
          <value>0</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="TMR2" registerAlias="TCON" settingAlias="TMRON" alias="off"/>
-         <value>0</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="MSSP1" registerAlias="SSPCON2" settingAlias="ACKSTAT"/>
          <value>received</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="TMR2" registerAlias="TCON" settingAlias="TMRON" alias="off"/>
+         <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="IOCAF" settingAlias="IOCAF5"/>
@@ -276,6 +292,10 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="INTERNAL OSCILLATOR" name="MFIntOsc31.25KHzClockInHz"/>
          <value>31250</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADCC" registerAlias="ADACQL" settingAlias="ADACQL"/>
+         <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="MSSP1" registerAlias="SSPSTAT"/>
@@ -326,6 +346,10 @@
          <value>0</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADCC" registerAlias="ADCNT" settingAlias="ADCNT"/>
+         <value>0</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="IOCCN" settingAlias="IOCCN6" alias="disabled"/>
          <value>0</value>
       </entry>
@@ -370,6 +394,10 @@
          <value>6</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCON2" settingAlias="ADMD" alias="Average_mode"/>
+         <value>2</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="iocUserSet RC2"/>
          <value>disabled</value>
       </entry>
@@ -398,20 +426,24 @@
          <value>0</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="CCP1" name="captureAssignedTimerDisplay"/>
-         <value>Timer 1</value>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCON3" settingAlias="ADCALC" alias="Actual result vs setpoint"/>
+         <value>1</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="MSSP1" registerAlias="SSPCON3" settingAlias="PCIE"/>
          <value>disabled</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="CCP2" name="compareAssignedTimerDisplay"/>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="CCP1" name="captureAssignedTimerDisplay"/>
          <value>Timer 1</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="MSSP1" registerAlias="SSPBUF" settingAlias="SSPBUF"/>
          <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="CCP2" name="compareAssignedTimerDisplay"/>
+         <value>Timer 1</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="Pin Module" registerAlias="IOCCN"/>
@@ -498,6 +530,10 @@
          <value>0x1</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADSTAT" settingAlias="ADSTAT" alias="1st precharge"/>
+         <value>1</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="IOCAP" settingAlias="IOCAP5"/>
          <value>disabled</value>
       </entry>
@@ -506,12 +542,20 @@
          <value>1</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="ADCC" registerAlias="ADCON3"/>
+         <value>86</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="System Module" registerAlias="CONFIG2" settingAlias="BORV" alias="HI"/>
          <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="CCP3" name="compareAssignedTimerDisplay"/>
          <value>Timer 1</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADCC" registerAlias="ADSTAT" settingAlias="ADAOV"/>
+         <value>ACC or ADERR not Overflowed</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="SLRCONC" settingAlias="SLRC4" alias="limited"/>
@@ -586,6 +630,10 @@
          <value>CLKR enabled</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="ADCC" registerAlias="ADCON2"/>
+         <value>84</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="SLRCONB" settingAlias="SLRB5" alias="limited"/>
          <value>1</value>
       </entry>
@@ -610,6 +658,10 @@
          <value>right_aligned</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCAP" settingAlias="ADCAP" alias="Additional uC of 3pF"/>
+         <value>3</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="CCP4" registerAlias="CCPCON" settingAlias="CCPM" alias="Every edge"/>
          <value>3</value>
       </entry>
@@ -619,6 +671,10 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="IOCCP" settingAlias="IOCCP2" alias="disabled"/>
+         <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="ADCC" registerAlias="ADRESL"/>
          <value>0</value>
       </entry>
       <entry>
@@ -754,6 +810,10 @@
          <value>0</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADSTAT" settingAlias="ADUTHR" alias="ADERR &gt; ADUTH"/>
+         <value>1</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="CCP4" name="CTSELvalue"/>
          <value>0x1</value>
       </entry>
@@ -810,6 +870,10 @@
          <value>0</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADCC" name="AccCalculationCount"/>
+         <value>5</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="CCP3" registerAlias="CCPRH"/>
          <value>0</value>
       </entry>
@@ -850,6 +914,10 @@
          <value>Timer 1</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="ADCC" registerAlias="ADRESH"/>
+         <value>0</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PMD" registerAlias="PMD7" settingAlias="CLC1MD" alias="CLC1 disabled"/>
          <value>1</value>
       </entry>
@@ -860,6 +928,14 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="System Module" registerAlias="CONFIG4" settingAlias="BBEN" alias="ON"/>
          <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADCC" name="AquisitionTime"/>
+         <value>0.0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCAP" settingAlias="ADCAP" alias="Additional uC of 20pF"/>
+         <value>20</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="CCP1" name="compareAssignedTimerDisplay"/>
@@ -974,6 +1050,10 @@
          <value>1</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADCC" registerAlias="ADCON1" settingAlias="ADDSEN"/>
+         <value>disabled</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="IOCCP" settingAlias="IOCCP6" alias="disabled"/>
          <value>0</value>
       </entry>
@@ -1014,15 +1094,15 @@
          <value>1</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="MSSP1" registerAlias="SSPSTAT" settingAlias="SMP" alias="End"/>
+         <value>1</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="TMR2" registerAlias="TRST"/>
          <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="CCP3" registerAlias="CCPTMRS" settingAlias="CTSEL" alias="CCP3timer1"/>
-         <value>1</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="MSSP1" registerAlias="SSPSTAT" settingAlias="SMP" alias="End"/>
          <value>1</value>
       </entry>
       <entry>
@@ -1072,6 +1152,10 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="CCP3" registerAlias="CCPCON" settingAlias="CCPM" alias="Clearoutput"/>
          <value>9</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADACT" settingAlias="ADACT" alias="ADACTPPS"/>
+         <value>1</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="Pin Module" registerAlias="SSP1CLKPPS"/>
@@ -1146,6 +1230,10 @@
          <value>0</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADACT" settingAlias="ADACT" alias="PWM6"/>
+         <value>14</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="IOCCP" settingAlias="IOCCP4" alias="disabled"/>
          <value>0</value>
       </entry>
@@ -1154,12 +1242,20 @@
          <value>1</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADACT" settingAlias="ADACT" alias="PWM7"/>
+         <value>15</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="IOCAN" settingAlias="IOCAN4" alias="disabled"/>
          <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="CCP1" registerAlias="CCPCON" settingAlias="CCPM" alias="Pulseoutput"/>
          <value>10</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADCC" name="samplingFrequency"/>
+         <value>51.1509kHz</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="PMD" registerAlias="PMD5" settingAlias="CWG1MD"/>
@@ -1230,6 +1326,10 @@
          <value>0</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADREF" settingAlias="ADPREF" alias="external"/>
+         <value>2</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="MSSP1" registerAlias="SSPCON1" settingAlias="SSPM" alias="FOSC/16"/>
          <value>1</value>
       </entry>
@@ -1242,6 +1342,10 @@
          <value>17</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCON3" settingAlias="ADTMD" alias="ADERR &lt; ADLTH or ADERR &gt; ADUTH"/>
+         <value>4</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="System Module" registerAlias="CONFIG2" settingAlias="ZCDDIS" alias="OFF"/>
          <value>1024</value>
       </entry>
@@ -1252,6 +1356,10 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="LATB" settingAlias="LATB4"/>
          <value>clear</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCAP" settingAlias="ADCAP" alias="Additional uC of 11pF"/>
+         <value>11</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="INTERNAL OSCILLATOR" registerAlias="OSCCON1" settingAlias="NDIV" alias="64"/>
@@ -1290,6 +1398,10 @@
          <value>1</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADCC" registerAlias="ADSTPTL" settingAlias="ADSTPTL"/>
+         <value>0</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="TMR2" name="tickerFactor"/>
          <value>0</value>
       </entry>
@@ -1298,7 +1410,7 @@
          <value>1</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="CCP3PPS%aux4"/>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="CCP3PPS%aux3"/>
          <value>2</value>
       </entry>
       <entry>
@@ -1386,6 +1498,14 @@
          <value>BB512</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCAP" settingAlias="ADCAP" alias="Additional uC of 25pF"/>
+         <value>25</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADREF" settingAlias="ADNREF" alias="external"/>
+         <value>1</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="EUSART1" registerAlias="SPBRGL"/>
          <value>31</value>
       </entry>
@@ -1466,12 +1586,12 @@
          <value>0</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="TMR0" name="minPeriod"/>
-         <value>0.000004</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="MSSP1" registerAlias="SSPCON1"/>
          <value>40</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="TMR0" name="minPeriod"/>
+         <value>0.000004</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="IOCCP" settingAlias="IOCCP6" alias="enabled"/>
@@ -1490,8 +1610,16 @@
          <value>0</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="ADCC" registerAlias="ADLTHL"/>
+         <value>0</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="EUSART1" registerAlias="BAUDCON" settingAlias="ABDOVF" alias="overflow"/>
          <value>1</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADCC" registerAlias="ADLTHL" settingAlias="ADLTHL"/>
+         <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="TMR2" registerAlias="THLT" settingAlias="TMODE" alias="Starts at rising edge on TMR2_ers"/>
@@ -1524,6 +1652,14 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="IOCBP" settingAlias="IOCBP7" alias="disabled"/>
          <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADCC" name="FVR_Buffer1"/>
+         <value>channel_FVR_Buffer1</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADCC" name="FVR_Buffer2"/>
+         <value>channel_FVR_Buffer2</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="CCP3" name="pwmAssignedTimerDisplay"/>
@@ -1602,6 +1738,10 @@
          <value>10</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADCC" registerAlias="ADACCL" settingAlias="ADACCL"/>
+         <value>0</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="IOCBP" settingAlias="IOCBP5" alias="disabled"/>
          <value>0</value>
       </entry>
@@ -1632,6 +1772,10 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="CCP1" registerAlias="CCPCAP" settingAlias="CTS" alias="LC3_OUT"/>
          <value>6</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCAP" settingAlias="ADCAP" alias="Additional uC of 16pF"/>
+         <value>16</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="CCP4" registerAlias="CCPCAP" settingAlias="CTS" alias="LC2_OUT"/>
@@ -1674,12 +1818,16 @@
          <value>80</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="CCP2" registerAlias="CCPCON" settingAlias="CCPM" alias="Rising edge"/>
-         <value>5</value>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCON3" settingAlias="ADSOI" alias="ADGO is cleared"/>
+         <value>1</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="MSSP1" registerAlias="SSPSTAT" settingAlias="S"/>
          <value>startbit_notdetected</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="CCP2" registerAlias="CCPCON" settingAlias="CCPM" alias="Rising edge"/>
+         <value>5</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="ODCONA" settingAlias="ODCA0"/>
@@ -1706,7 +1854,7 @@
          <value>8</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="RX1DTPPS%aux3"/>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="RX1DTPPS%aux4"/>
          <value>12</value>
       </entry>
       <entry>
@@ -1726,12 +1874,24 @@
          <value>7</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/12"/>
+         <value>5</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/14"/>
+         <value>6</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="INTERNAL OSCILLATOR" registerAlias="OSCEN" settingAlias="HFOEN" alias="enabled"/>
          <value>1</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="CCP1" registerAlias="CCPCAP" settingAlias="CTS" alias="CMP1_OUT"/>
          <value>1</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/10"/>
+         <value>4</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="CCP4" name="pwmResolution"/>
@@ -1762,12 +1922,48 @@
          <value>0</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/16"/>
+         <value>7</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/18"/>
+         <value>8</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/24"/>
+         <value>11</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADSTAT" settingAlias="ADMATH" alias="registers updated"/>
+         <value>1</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/26"/>
+         <value>12</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="Custom Name RA0"/>
          <value/>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/20"/>
+         <value>9</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCAP" settingAlias="ADCAP" alias="Additional uC disabled"/>
+         <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/22"/>
+         <value>10</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="TMR2" registerAlias="TCLKCON" settingAlias="TCS" alias="CLC1_OUT"/>
          <value>11</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="ADCC" registerAlias="ADSTAT"/>
+         <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="SLRCONC" settingAlias="SLRC6" alias="limited"/>
@@ -1782,24 +1978,28 @@
          <value>0</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="MSSP1" name="tmr2Freq"/>
+         <value>31250.0</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="CCP1" name="ccpMode"/>
          <value>PWM</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="MSSP1" name="tmr2Freq"/>
-         <value>31250.0</value>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCAP" settingAlias="ADCAP" alias="Additional uC of 29pF"/>
+         <value>29</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="IOCBP" settingAlias="IOCBP7" alias="enabled"/>
          <value>1</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="CCP4" registerAlias="CCPRL" settingAlias="CCPRL"/>
-         <value>0</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="MSSP1" name="SSPIInitiliazed"/>
          <value>enabled</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="CCP4" registerAlias="CCPRL" settingAlias="CCPRL"/>
+         <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="CCP3" registerAlias="CCPRL" settingAlias="CCPRL"/>
@@ -1810,12 +2010,24 @@
          <value>TMR6 enabled</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/28"/>
+         <value>13</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="ANSELB" settingAlias="ANSB7" alias="analog"/>
          <value>1</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="Pin Module" registerAlias="CLCIN3PPS"/>
          <value>13</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/34"/>
+         <value>16</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/36"/>
+         <value>17</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="CCP2" registerAlias="CCPRL" settingAlias="CCPRL"/>
@@ -1826,8 +2038,16 @@
          <value>0</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/30"/>
+         <value>14</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="MSSP1" name="100ns"/>
          <value>100ns</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/32"/>
+         <value>15</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="CCP2" registerAlias="CCPCAP" settingAlias="CTS" alias="IOC_event"/>
@@ -1858,6 +2078,14 @@
          <value>0</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADCC" registerAlias="ADREF" settingAlias="ADPREF"/>
+         <value>VDD</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="ADCC" registerAlias="ADRPT"/>
+         <value>0</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="INTERNAL OSCILLATOR" name="pllMultiplier"/>
          <value>OFF</value>
       </entry>
@@ -1878,12 +2106,28 @@
          <value>asynchronous</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADCC" name="PrechargeCount"/>
+         <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADREF" settingAlias="ADNREF" alias="VSS"/>
+         <value>0</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="Custom Name RA1"/>
          <value/>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADCC" registerAlias="ADI" settingAlias="flag"/>
+         <value>disabled</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="Custom Name RA2"/>
          <value>IO_RA2</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/38"/>
+         <value>18</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="Custom Name RA3"/>
@@ -1898,16 +2142,20 @@
          <value>1</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="SDA1%isActiveBidirectional"/>
+         <value>enabled</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/46"/>
+         <value>22</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="CCP4" registerAlias="CCPTMRS" settingAlias="CTSEL"/>
          <value>PWM4timer2</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="CCP4" registerAlias="CCPCAP" settingAlias="CTS" alias="LC4_OUT"/>
          <value>7</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="SDA1%isActiveBidirectional"/>
-         <value>enabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="INTERNAL OSCILLATOR" registerAlias="OSCFRQ" settingAlias="HFFRQ" alias="1_MHz"/>
@@ -1918,12 +2166,20 @@
          <value>PWM2timer2</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/48"/>
+         <value>23</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="CCP2" registerAlias="CCPCAP" settingAlias="CTS" alias="LC1_OUT"/>
          <value>4</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="CCP3" registerAlias="CCPTMRS" settingAlias="CTSEL"/>
          <value>PWM3timer2</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/42"/>
+         <value>20</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="CCP1" registerAlias="CCPTMRS" settingAlias="CTSEL"/>
@@ -1938,16 +2194,36 @@
          <value>0x7F</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/44"/>
+         <value>21</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="TMR2" registerAlias="THLT" settingAlias="TCKPOL"/>
          <value>Rising Edge</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/40"/>
+         <value>19</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="CLCIN2PPS" settingAlias="CLCIN2PPS"/>
          <value>12</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADACT" settingAlias="ADACT" alias="CMP2"/>
+         <value>18</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="Pin Module" registerAlias="RX1DTPPS"/>
          <value>12</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCON3" settingAlias="ADCALC" alias="First derivative of Single measurement"/>
+         <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADACT" settingAlias="ADACT" alias="CMP1"/>
+         <value>17</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="TMR2" registerAlias="TRST" settingAlias="TRSEL" alias="CLC1_out"/>
@@ -1966,16 +2242,36 @@
          <value>CWG2 enabled</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="EUSART1" registerAlias="TXSTA" settingAlias="TRMT"/>
-         <value>TSR_empty</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="MSSP1" registerAlias="SSPSTAT" settingAlias="SMP" alias="Middle"/>
          <value>0</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="EUSART1" registerAlias="TXSTA" settingAlias="TRMT"/>
+         <value>TSR_empty</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="CCP2" name="pwmResolution"/>
          <value>10 bits</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/56"/>
+         <value>27</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/58"/>
+         <value>28</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/52"/>
+         <value>25</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/54"/>
+         <value>26</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/50"/>
+         <value>24</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="SLRCONC" settingAlias="SLRC5" alias="limited"/>
@@ -1998,6 +2294,10 @@
          <value>1</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/68"/>
+         <value>33</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PMD" registerAlias="PMD0" settingAlias="FVRMD" alias="FVR enabled"/>
          <value>0</value>
       </entry>
@@ -2006,16 +2306,36 @@
          <value>disabled</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/64"/>
+         <value>31</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="TMR2" registerAlias="TCLKCON" settingAlias="TCS" alias="CLKR"/>
          <value>8</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/66"/>
+         <value>32</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="CCP3" name="pwmCCPRDisplayValue"/>
          <value>0</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/60"/>
+         <value>29</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/62"/>
+         <value>30</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PMD" registerAlias="PMD6" settingAlias="MSSP2MD" alias="MSSP2 enabled"/>
          <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCAP" settingAlias="ADCAP" alias="Additional uC of 7pF"/>
+         <value>7</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="IOCCP" settingAlias="IOCCP7" alias="enabled"/>
@@ -2054,12 +2374,20 @@
          <value>1</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/78"/>
+         <value>38</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="CCP2" registerAlias="CCPCON" settingAlias="FMT" alias="right_aligned"/>
          <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="CCP1" name="pwmResolution"/>
          <value>10 bits</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/74"/>
+         <value>36</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="System Module" registerAlias="CONFIG1" settingAlias="CLKOUTEN"/>
@@ -2070,12 +2398,28 @@
          <value>disabled</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/76"/>
+         <value>37</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/70"/>
+         <value>34</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/72"/>
+         <value>35</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="TMR2" registerAlias="TTMR" settingAlias="TMR"/>
          <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="SLRCONC" settingAlias="SLRC7" alias="limited"/>
          <value>1</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADCC" registerAlias="ADSTAT" settingAlias="ADMATH"/>
+         <value>registers not updated</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="IOCBP" settingAlias="IOCBP6" alias="enabled"/>
@@ -2098,28 +2442,56 @@
          <value>1</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/86"/>
+         <value>42</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="MSSP1" registerAlias="SSPCON3" settingAlias="AHEN" alias="enabled"/>
          <value>1</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/88"/>
+         <value>43</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="IOCCN" settingAlias="IOCCN7"/>
          <value>disabled</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/82"/>
+         <value>40</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="MSSP1" registerAlias="BCLI" settingAlias="enable"/>
          <value>enabled</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="CCP2" name="pwmCCPRDisplayValue"/>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADCC" name="RepeatCount"/>
          <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/84"/>
+         <value>41</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="MSSP1" name="i2cMastermode"/>
          <value>I2C Master</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="CCP2" name="pwmCCPRDisplayValue"/>
+         <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/80"/>
+         <value>39</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="Pin Module" registerAlias="RA4PPS"/>
          <value>20</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="ADCC" registerAlias="ADCLK"/>
+         <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="MSSP1" registerAlias="SSPCON3" settingAlias="DHEN" alias="disabled"/>
@@ -2130,24 +2502,44 @@
          <value>IVT1</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/96"/>
+         <value>47</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/98"/>
+         <value>48</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/92"/>
+         <value>45</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="CCP1" name="pwmAssignedTimerDisplay"/>
          <value>Timer 2</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/94"/>
+         <value>46</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="EUSART1" registerAlias="RCSTA" settingAlias="OERR" alias="no_error"/>
          <value>0</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/90"/>
+         <value>44</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PMD" registerAlias="PMD1" settingAlias="TMR5MD" alias="TMR5 enabled"/>
          <value>0</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="TMR0" registerAlias="TMRI" settingAlias="enable"/>
-         <value>enabled</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="MSSP1" name="300ns"/>
          <value>100ns</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="TMR0" registerAlias="TMRI" settingAlias="enable"/>
+         <value>enabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="TMR2" registerAlias="TMRI" settingAlias="enable"/>
@@ -2155,6 +2547,10 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PMD" registerAlias="PMD0" settingAlias="SYSCMD" alias="SYSCLK enabled"/>
+         <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="ADCC" registerAlias="ADLTHH"/>
          <value>0</value>
       </entry>
       <entry>
@@ -2170,6 +2566,10 @@
          <value>1</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADSTAT" settingAlias="ADSTAT" alias="1st conversion"/>
+         <value>3</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="CCP1" name="pwmDuCyDisplayValue"/>
          <value>0</value>
       </entry>
@@ -2178,11 +2578,19 @@
          <value>disabled</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="CCP4PPS%aux5"/>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="CCP2" name="ccpr"/>
+         <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADCC" registerAlias="ADRESL" settingAlias="ADRESL"/>
+         <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="CCP4PPS%aux7"/>
          <value>4</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="CCP2" name="ccpr"/>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADCC" name="LowerThresholdCount"/>
          <value>0</value>
       </entry>
       <entry>
@@ -2234,24 +2642,24 @@
          <value>7</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="TMR2" registerAlias="THLT" settingAlias="TMODE" alias="Resets at TMR2_ers = 0"/>
-         <value>6</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="MSSP1" registerAlias="SSPCON3" settingAlias="AHEN" alias="disabled"/>
          <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="TMR2" registerAlias="THLT" settingAlias="TMODE" alias="Resets at TMR2_ers = 0"/>
+         <value>6</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="MSSP1" registerAlias="SSPCON3" settingAlias="DHEN"/>
          <value>disabled</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="DT1%isActiveBidirectional"/>
-         <value>disabled</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="MSSP1" registerAlias="SSPCON1" settingAlias="SSPM" alias="10 Bit"/>
          <value>15</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="DT1%isActiveBidirectional"/>
+         <value>disabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="MSSP1" registerAlias="SSPSTAT" settingAlias="SMP" alias="High Speed"/>
@@ -2262,16 +2670,20 @@
          <value>1</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCAP" settingAlias="ADCAP" alias="Additional uC of 4pF"/>
+         <value>4</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="CCP4" registerAlias="CCPTMRS" settingAlias="CTSEL" alias="CCP4timer3"/>
          <value>2</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="CCP4" registerAlias="CCPTMRS" settingAlias="CTSEL" alias="CCP4timer5"/>
-         <value>3</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="MSSP1" registerAlias="SSPSTAT" settingAlias="R_nW"/>
          <value>write_noTX</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="CCP4" registerAlias="CCPTMRS" settingAlias="CTSEL" alias="CCP4timer5"/>
+         <value>3</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="System Module" registerAlias="CONFIG1" settingAlias="RSTOSC"/>
@@ -2286,6 +2698,10 @@
          <value>CLC4 enabled</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCON2" settingAlias="ADACLR" alias="enabled"/>
+         <value>1</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="INTERNAL OSCILLATOR" registerAlias="OSCEN" settingAlias="MFOEN"/>
          <value>disabled</value>
       </entry>
@@ -2296,6 +2712,10 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="MSSP1" registerAlias="BCLI" settingAlias="order"/>
          <value>-1</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCON1" settingAlias="ADDSEN" alias="disabled"/>
+         <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="LATB" settingAlias="LATB7" alias="clear"/>
@@ -2314,6 +2734,10 @@
          <value>enabled</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCON3" settingAlias="ADTMD" alias="ADERR &lt;= ADUTH"/>
+         <value>5</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="MDCARLPPS" settingAlias="MDCARLPPS"/>
          <value>18</value>
       </entry>
@@ -2326,8 +2750,16 @@
          <value>1</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADSTAT" settingAlias="ADSTAT" alias="2st conversion"/>
+         <value>7</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="TMR2" registerAlias="THLT" settingAlias="TMODE" alias="Resets at falling TMR2_ers"/>
          <value>5</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADCC" registerAlias="ADCAP" settingAlias="ADCAP"/>
+         <value>Additional uC disabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="CCP1" name="ccpr"/>
@@ -2362,12 +2794,28 @@
          <value>0</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADPCH" settingAlias="ADCHS" alias="FVR_Buffer1"/>
+         <value>62</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCON0" settingAlias="ADCONT" alias="enabled"/>
+         <value>1</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="CCP4" registerAlias="CCPCON" settingAlias="CCPM" alias="Rising edge"/>
          <value>5</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="ADCC" registerAlias="ADPCH"/>
+         <value>0</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="Pin Module" registerAlias="TX1CKPPS"/>
          <value>15</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADPCH" settingAlias="ADCHS" alias="FVR_Buffer2"/>
+         <value>63</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="CCP1" registerAlias="CCPCAP" settingAlias="CTS" alias="IOC_event"/>
@@ -2392,6 +2840,14 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="System Module" registerAlias="CONFIG2" settingAlias="PWRTS" alias="PWRT_64"/>
          <value>4</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADSTAT" settingAlias="ADAOV" alias="ACC or ADERR not Overflowed"/>
+         <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADSTAT" settingAlias="ADUTHR" alias="ADERR &lt; ADUTH"/>
+         <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="Pin Module" registerAlias="INLVLB"/>
@@ -2462,6 +2918,10 @@
          <value>0</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="ADCC" registerAlias="ADACCL"/>
+         <value>0</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="RB7PPS" settingAlias="RB7PPS"/>
          <value>0</value>
       </entry>
@@ -2475,6 +2935,10 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="CCP3" name="ccpr"/>
+         <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="ADCC" registerAlias="ADACCH"/>
          <value>0</value>
       </entry>
       <entry>
@@ -2496,6 +2960,10 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="TMR2" registerAlias="TRST" settingAlias="TRSEL" alias="CLC4_out"/>
          <value>16</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADCC" registerAlias="ADCON3" settingAlias="ADTMD"/>
+         <value>ADERR &gt; ADUTH</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="LATC" settingAlias="LATC5"/>
@@ -2662,6 +3130,10 @@
          <value>Toggle_cleartmr</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCON2" settingAlias="ADACLR" alias="disabled"/>
+         <value>0</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="MSSP1" registerAlias="SSPCON1" settingAlias="WCOL" alias="collision"/>
          <value>1</value>
       </entry>
@@ -2678,6 +3150,10 @@
          <value>1</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADCC" registerAlias="ADUTHH" settingAlias="ADUTHH"/>
+         <value>0</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="CCP1" registerAlias="CCPCON" settingAlias="CCPM"/>
          <value>PWM</value>
       </entry>
@@ -2686,16 +3162,24 @@
          <value>clear</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="CCP1" registerAlias="CCPCAP" settingAlias="CTS" alias="LC2_OUT"/>
-         <value>5</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="MSSP1" registerAlias="SSPCON3" settingAlias="SDAHT" alias="100ns"/>
          <value>0</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="CCP1" registerAlias="CCPCAP" settingAlias="CTS" alias="LC2_OUT"/>
+         <value>5</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCAP" settingAlias="ADCAP" alias="Additional uC of 10pF"/>
+         <value>10</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="INTERNAL OSCILLATOR" registerAlias="OSCFRQ" settingAlias="HFFRQ" alias="32_MHz"/>
          <value>6</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADCC" name="ADCC_ADIISRFunction"/>
+         <value>ISR</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="IOCCN" settingAlias="IOCCN2"/>
@@ -2718,6 +3202,14 @@
          <value>timerselpresent</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADCC" name="conversionTime"/>
+         <value>19.55 us</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCON0" settingAlias="ADCONT" alias="disabled"/>
+         <value>0</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="CCP4" registerAlias="CCPCAP" settingAlias="CTS" alias="LC1_OUT"/>
          <value>4</value>
       </entry>
@@ -2735,7 +3227,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="ADACTPPS" settingAlias="ADACTPPS"/>
-         <value>18</value>
+         <value>15</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="WPUA" settingAlias="WPUA1" alias="clear"/>
@@ -2756,6 +3248,10 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="System Module" registerAlias="CONFIG4" settingAlias="WRTB" alias="OFF"/>
          <value>256</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="ADCC" registerAlias="ADACQL"/>
+         <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="SSP2CLKPPS" settingAlias="SSP2CLKPPS"/>
@@ -2808,6 +3304,10 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="CCP1" registerAlias="CCPCON" settingAlias="CCPM" alias="off/reset"/>
          <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCAP" settingAlias="ADCAP" alias="Additional uC of 23pF"/>
+         <value>23</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="CCP2" name="compareMode"/>
@@ -2882,8 +3382,16 @@
          <value>32000000</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADCC" registerAlias="ADPREH" settingAlias="ADPREH"/>
+         <value>0</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="WPUA" settingAlias="WPUA2"/>
          <value>set</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="ADCC" registerAlias="ADACCU"/>
+         <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="LATC" settingAlias="LATC0"/>
@@ -2894,12 +3402,20 @@
          <value>0</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADCC" registerAlias="ADCON1" settingAlias="ADGPOL"/>
+         <value>digital_low</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="ANSELC" settingAlias="ANSC1" alias="digital"/>
          <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="Pin Module" registerAlias="CWG1PPS"/>
          <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADPCH" settingAlias="ADCHS" alias="Vss"/>
+         <value>59</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="System Module" registerAlias="CONFIG1" settingAlias="FCMEN"/>
@@ -2914,8 +3430,28 @@
          <value>Toggle_cleartmr</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/6"/>
+         <value>2</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/8"/>
+         <value>3</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="INLVLA" settingAlias="INLVLA2"/>
          <value>ST_input</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/2"/>
+         <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/4"/>
+         <value>1</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADCC" registerAlias="ADACT" settingAlias="ADACT"/>
+         <value>disabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="WPUC" settingAlias="WPUC0" alias="clear"/>
@@ -2938,16 +3474,24 @@
          <value>clear</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="ADCC" registerAlias="ADACQH"/>
+         <value>0</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="CCP4" registerAlias="CCPCON" settingAlias="CCPM" alias="Falling edge"/>
          <value>4</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="EUSART1" registerAlias="RCSTA" settingAlias="RX9" alias="8-bit"/>
-         <value>0</value>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADCC" registerAlias="ADCON0" settingAlias="GO_nDONE"/>
+         <value>stop</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="MSSP1" registerAlias="SSPCON1" settingAlias="SSPOV"/>
          <value>no_overflow</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="EUSART1" registerAlias="RCSTA" settingAlias="RX9" alias="8-bit"/>
+         <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="CCP2" registerAlias="CCPTMRS" settingAlias="CTSEL" alias="PWM2timer2"/>
@@ -2990,12 +3534,32 @@
          <value>0</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/110"/>
+         <value>54</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/112"/>
+         <value>55</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/114"/>
+         <value>56</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="TMR2" registerAlias="THLT" settingAlias="TMODE" alias="Starts at rising edge and resets on TMR2_ers=0"/>
          <value>14</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/116"/>
+         <value>57</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="TRISA" settingAlias="TRISA1"/>
          <value>input</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/118"/>
+         <value>58</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="System Module" registerAlias="CONFIG1" settingAlias="FEXTOSC" alias="ECH"/>
@@ -3004,6 +3568,10 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="SLRCONB" settingAlias="SLRB6"/>
          <value>limited</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="ADCC" registerAlias="ADUTHL"/>
+         <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="ODCONC" settingAlias="ODCC7"/>
@@ -3026,28 +3594,48 @@
          <value>1</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="TMR2" registerAlias="TCLKCON" settingAlias="TCS"/>
-         <value>FOSC/4</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="MSSP1" name="i2cMasterspeedControl"/>
          <value>High Speed</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="TMR2" registerAlias="TCLKCON" settingAlias="TCS" alias="MFINTOSC_31.25KHz"/>
-         <value>6</value>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="TMR2" registerAlias="TCLKCON" settingAlias="TCS"/>
+         <value>FOSC/4</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="MSSP1" name="spiClockSource"/>
          <value>FOSC/4</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="TMR2" registerAlias="TCLKCON" settingAlias="TCS" alias="MFINTOSC_31.25KHz"/>
+         <value>6</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="Pin Module_IOCIISRFunction"/>
          <value>ISR_Pin Module_IOCI</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/100"/>
+         <value>49</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/102"/>
+         <value>50</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/104"/>
+         <value>51</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="ANSELA" settingAlias="ANSA0" alias="analog"/>
          <value>1</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/106"/>
+         <value>52</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/108"/>
+         <value>53</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="EUSART1" registerAlias="RCSTA" settingAlias="CREN" alias="enabled"/>
@@ -3086,12 +3674,20 @@
          <value>Toggle_cleartmr</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCAP" settingAlias="ADCAP" alias="Additional uC of 24pF"/>
+         <value>24</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="ANSELA" settingAlias="ANSA1" alias="analog"/>
          <value>1</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="RB5PPS" settingAlias="RB5PPS"/>
          <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADCC" name="clockFreq"/>
+         <value>32000000</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="TRISA" settingAlias="TRISA0"/>
@@ -3138,8 +3734,28 @@
          <value>9</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/120"/>
+         <value>59</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/122"/>
+         <value>60</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/124"/>
+         <value>61</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="LATC" settingAlias="LATC2" alias="set"/>
          <value>1</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/126"/>
+         <value>62</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS" alias="FOSC/128"/>
+         <value>63</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="System Module" registerAlias="CONFIG3" settingAlias="WDTE"/>
@@ -3148,6 +3764,10 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="PMD" registerAlias="PMD7" settingAlias="DSM1MD"/>
          <value>DSM enabled</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADCC" name="AquisitionMaxCount"/>
+         <value>8191</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="ANSELA" settingAlias="ANSA0"/>
@@ -3198,6 +3818,10 @@
          <value>1</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADCC" registerAlias="ADTI" settingAlias="enable"/>
+         <value>enabled</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="INTERNAL OSCILLATOR" name="T1oscen"/>
          <value>disabled</value>
       </entry>
@@ -3227,6 +3851,10 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="EUSART1" registerAlias="TXSTA" settingAlias="TRMT" alias="TSR_full"/>
+         <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="ADCC" registerAlias="ADUTHH"/>
          <value>0</value>
       </entry>
       <entry>
@@ -3282,12 +3910,24 @@
          <value>PWM6 enabled</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADSTAT" settingAlias="ADSTAT" alias="not converting"/>
+         <value>0</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="EUSART1" registerAlias="BAUDCON" settingAlias="SCKP" alias="Non-Inverted"/>
          <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PMD" registerAlias="PMD7" settingAlias="CLC2MD" alias="CLC2 disabled"/>
          <value>1</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADCC" registerAlias="ADCON2" settingAlias="ADPSIS"/>
+         <value>RES</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADACT" settingAlias="ADACT" alias="ADRESH"/>
+         <value>29</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="ANSELC" settingAlias="ANSC4" alias="digital"/>
@@ -3298,6 +3938,10 @@
          <value>16</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADCC" registerAlias="ADCON1" settingAlias="ADIPEN"/>
+         <value>disabled</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="LATA" settingAlias="LATA2" alias="clear"/>
          <value>0</value>
       </entry>
@@ -3306,8 +3950,16 @@
          <value>0</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADCC" registerAlias="ADCON3" settingAlias="ADSOI"/>
+         <value>ADGO not cleared</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="TRISA" settingAlias="TRISA3"/>
          <value>input</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCAP" settingAlias="ADCAP" alias="Additional uC of 15pF"/>
+         <value>15</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="ANSELA" settingAlias="ANSA2" alias="analog"/>
@@ -3414,8 +4066,20 @@
          <value>disabled</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADCC" name="sysClock"/>
+         <value>8000000</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="CCP4" name="pwmPeriod"/>
          <value>3.2E-5</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCON1" settingAlias="ADGPOL" alias="digital_high"/>
+         <value>1</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCON3" settingAlias="ADTMD" alias="disabled"/>
+         <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="WPUB" settingAlias="WPUB5" alias="set"/>
@@ -3451,6 +4115,10 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="RC4"/>
+         <value>disabled</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADCC" registerAlias="ADI" settingAlias="enable"/>
          <value>disabled</value>
       </entry>
       <entry>
@@ -3538,6 +4206,14 @@
          <value>0</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCON3" settingAlias="ADCALC" alias="Filtered value vs setpoint"/>
+         <value>5</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCON2" settingAlias="ADMD" alias="Low_pass_filter_mode"/>
+         <value>4</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="System Module" registerAlias="CONFIG2" settingAlias="ZCDDIS"/>
          <value>OFF</value>
       </entry>
@@ -3562,12 +4238,12 @@
          <value>0</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="CCP3" registerAlias="CCPCAP" settingAlias="CTS" alias="LC3_OUT"/>
-         <value>6</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="MSSP1" name="firstOccurenceBCLI"/>
          <value>enabled</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="CCP3" registerAlias="CCPCAP" settingAlias="CTS" alias="LC3_OUT"/>
+         <value>6</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="WPUB" settingAlias="WPUB5" alias="clear"/>
@@ -3580,6 +4256,10 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="TMR0" registerAlias="T0CON1" settingAlias="T0CKPS" alias="1:128"/>
          <value>7</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCAP" settingAlias="ADCAP" alias="Additional uC of 28pF"/>
+         <value>28</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="ANSELA" settingAlias="ANSA5"/>
@@ -3596,6 +4276,14 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="MSSP1" registerAlias="SSPCON2" settingAlias="SEN"/>
          <value>disabled</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADCC" name="ADCC_ADTIISRFunction"/>
+         <value>ThresholdISR</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADREF" settingAlias="ADPREF" alias="FVR"/>
+         <value>3</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="IOCBN" settingAlias="IOCBN5"/>
@@ -3746,6 +4434,10 @@
          <value>1</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADCC" registerAlias="ADSTAT" settingAlias="ADUTHR"/>
+         <value>ADERR &lt; ADUTH</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="Pin Module" registerAlias="ANSELB"/>
          <value>224</value>
       </entry>
@@ -3776,6 +4468,10 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="WPUC" settingAlias="WPUC5" alias="set"/>
          <value>1</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADCC" registerAlias="ADCON2" settingAlias="ADACLR"/>
+         <value>disabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="LATB" settingAlias="LATB4" alias="clear"/>
@@ -3822,6 +4518,10 @@
          <value>0</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADCC" registerAlias="ADRPT" settingAlias="ADRPT"/>
+         <value>0</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="WPUB" settingAlias="WPUB6" alias="set"/>
          <value>1</value>
       </entry>
@@ -3854,12 +4554,20 @@
          <value>12</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCON3" settingAlias="ADSOI" alias="ADGO not cleared"/>
+         <value>0</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="WPUC" settingAlias="WPUC5" alias="clear"/>
          <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="MSSP1" registerAlias="SSPCON1" settingAlias="WCOL"/>
          <value>no_collision</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCAP" settingAlias="ADCAP" alias="Additional uC of 8pF"/>
+         <value>8</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="INLVLB" settingAlias="INLVLB5" alias="TTL_input"/>
@@ -3882,8 +4590,16 @@
          <value>0</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADCC" name="ANA5"/>
+         <value>disabled</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="LATC" settingAlias="LATC1" alias="set"/>
          <value>1</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADCC" name="ANA4"/>
+         <value>disabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="MDCARHPPS" settingAlias="MDCARHPPS"/>
@@ -3894,8 +4610,20 @@
          <value>22</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADCC" name="ANA2"/>
+         <value>disabled</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="ANSELC" settingAlias="ANSC6" alias="digital"/>
          <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADCC" name="ANA1"/>
+         <value>disabled</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADCC" name="ANA0"/>
+         <value>disabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="trisUserSetRA4"/>
@@ -3970,12 +4698,32 @@
          <value>disabled</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCAP" settingAlias="ADCAP" alias="Additional uC of 19pF"/>
+         <value>19</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="MSSP1" name="i2cSlavespeedControl"/>
          <value>High Speed</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADCC" name="ANB7"/>
+         <value>enabled</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADCC" name="ANB6"/>
+         <value>disabled</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="MSSP1" registerAlias="SSPCON1" settingAlias="SSPM" alias="FOSC/4_SSPxADD_I2C"/>
          <value>8</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADCC" name="ANB5"/>
+         <value>disabled</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADCC" name="ANB4"/>
+         <value>disabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="System Module" registerAlias="CONFIG2" settingAlias="BOREN" alias="NSLEEP"/>
@@ -4018,16 +4766,48 @@
          <value>32</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADCC" name="ANC7"/>
+         <value>disabled</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="CLCIN1PPS" settingAlias="CLCIN1PPS"/>
          <value>19</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADCC" name="ANC6"/>
+         <value>disabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="Pin Module" registerAlias="ODCONB"/>
          <value>0</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADCC" name="ANC5"/>
+         <value>disabled</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADCC" name="ANC4"/>
+         <value>disabled</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PMD" registerAlias="PMD1" settingAlias="TMR6MD" alias="TMR6 enabled"/>
          <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADCC" name="ANC3"/>
+         <value>disabled</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADCC" name="ANC2"/>
+         <value>disabled</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADCC" name="ANC1"/>
+         <value>disabled</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADCC" name="ANC0"/>
+         <value>disabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="System Module" registerAlias="CONFIG3" settingAlias="WDTCWS" alias="WDTCWS_0"/>
@@ -4174,6 +4954,10 @@
          <value>2</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="ADCC" registerAlias="ADPREL"/>
+         <value>0</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="System Module" registerAlias="CONFIG4" settingAlias="WRTD"/>
          <value>OFF</value>
       </entry>
@@ -4214,6 +4998,14 @@
          <value>1</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADCC" registerAlias="ADSTAT" settingAlias="ADLTHR"/>
+         <value>ADERR &lt; ADLTH</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCAP" settingAlias="ADCAP" alias="Additional uC of 5pF"/>
+         <value>5</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="SLRCONA" settingAlias="SLRA4" alias="maximum"/>
          <value>0</value>
       </entry>
@@ -4230,12 +5022,20 @@
          <value>0</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADCC" registerAlias="ADSTPTH" settingAlias="ADSTPTH"/>
+         <value>0</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="PMD" registerAlias="PMD2"/>
          <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="CCP3" registerAlias="CCPCON" settingAlias="CCPM" alias="Falling edge"/>
          <value>4</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADCC" registerAlias="ADACQH" settingAlias="ADACQH"/>
+         <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="INLVLC" settingAlias="INLVLC2" alias="ST_input"/>
@@ -4254,12 +5054,24 @@
          <value>1</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCON3" settingAlias="ADCALC" alias="Actual result vs filtered value"/>
+         <value>2</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADSTAT" settingAlias="ADSTAT" alias="2st acquisition"/>
+         <value>6</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="PMD" registerAlias="PMD3"/>
          <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PMD" registerAlias="PMD4" settingAlias="CCP4MD" alias="CCP4 enabled"/>
          <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCAP" settingAlias="ADCAP" alias="Additional uC of 31pF"/>
+         <value>31</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="TMR0" registerAlias="T0CON1" settingAlias="T0CS" alias="HFINTOSC"/>
@@ -4270,11 +5082,11 @@
          <value>1</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="CCP2" registerAlias="CCPCON" settingAlias="CCPM" alias="off/reset"/>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="MSSP1" registerAlias="SSPCON3" settingAlias="SCIE" alias="disabled"/>
          <value>0</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="MSSP1" registerAlias="SSPCON3" settingAlias="SCIE" alias="disabled"/>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="CCP2" registerAlias="CCPCON" settingAlias="CCPM" alias="off/reset"/>
          <value>0</value>
       </entry>
       <entry>
@@ -4304,6 +5116,10 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="TMR2" registerAlias="TCLKCON" settingAlias="TCS" alias="NCO1OUT"/>
          <value>9</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADSTAT" settingAlias="ADSTAT" alias="1st acquisition"/>
+         <value>2</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="ODCONC" settingAlias="ODCC2"/>
@@ -4360,6 +5176,10 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="System Module" registerAlias="CONFIG3" settingAlias="WDTCPS" alias="WDTCPS_8"/>
          <value>8</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="ADCC" registerAlias="ADPREH"/>
+         <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="System Module" registerAlias="CONFIG3" settingAlias="WDTCPS" alias="WDTCPS_7"/>
@@ -4430,12 +5250,12 @@
          <value>15</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="TMR0" registerAlias="T0CON0" settingAlias="T0OUTPS" alias="1:15"/>
-         <value>14</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="MSSP1" registerAlias="SSPCON3" settingAlias="ACKTIM" alias="ackseq"/>
          <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="TMR0" registerAlias="T0CON0" settingAlias="T0OUTPS" alias="1:15"/>
+         <value>14</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="WPUA" settingAlias="WPUA1" alias="set"/>
@@ -4462,12 +5282,12 @@
          <value>0</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="TMR0" registerAlias="T0CON0" settingAlias="T0OUTPS" alias="1:10"/>
-         <value>9</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="MSSP1" registerAlias="SSPSTAT" settingAlias="UA" alias="dontupdate"/>
          <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="TMR0" registerAlias="T0CON0" settingAlias="T0OUTPS" alias="1:10"/>
+         <value>9</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="CCP3" registerAlias="CCPCAP" settingAlias="CTS" alias="CCP3 pin"/>
@@ -4494,6 +5314,10 @@
          <value>0</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADSTAT" settingAlias="ADLTHR" alias="ADERR &gt; ADLTH"/>
+         <value>1</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="CCP1" name="clockFreq"/>
          <value>32000000</value>
       </entry>
@@ -4506,12 +5330,20 @@
          <value>0</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADACT" settingAlias="ADACT" alias="SMT1"/>
+         <value>9</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="System Module" registerAlias="CONFIG2" settingAlias="STVREN" alias="OFF"/>
          <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="SSP1SSPPS" settingAlias="SSP1SSPPS"/>
          <value>22</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADCC" name="UpperThresholdCount"/>
+         <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="LATC" settingAlias="LATC4" alias="set"/>
@@ -4538,6 +5370,10 @@
          <value>2</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCON1" settingAlias="ADPPOL" alias="Vdd"/>
+         <value>1</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="SSP2SSPPS" settingAlias="SSP2SSPPS"/>
          <value>1</value>
       </entry>
@@ -4555,6 +5391,10 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="Pin Module" registerAlias="IOCAP"/>
+         <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADCC" registerAlias="ADACCH" settingAlias="ADACCH"/>
          <value>0</value>
       </entry>
       <entry>
@@ -4606,8 +5446,20 @@
          <value>1</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADCC" registerAlias="ADCON2" settingAlias="ADCRS"/>
+         <value>5</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="INLVLB" settingAlias="INLVLB7" alias="ST_input"/>
          <value>1</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCAP" settingAlias="ADCAP" alias="Additional uC of 1pF"/>
+         <value>1</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADCC" registerAlias="ADCON0" settingAlias="ADON"/>
+         <value>enabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PMD" registerAlias="PMD6" settingAlias="MSSP2MD" alias="MSSP2 disabled"/>
@@ -4694,6 +5546,10 @@
          <value>input</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADSTAT" settingAlias="ADAOV" alias="ACC or ADERR Overflowed"/>
+         <value>1</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="CCP4" registerAlias="CCPCON" settingAlias="CCPM" alias="Pulseoutput"/>
          <value>10</value>
       </entry>
@@ -4708,6 +5564,10 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="MSSP1" name="spiMasterClkPolarity"/>
          <value>Idle:Low, Active:High</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADSTAT" settingAlias="ADSTAT" alias="2st precharge"/>
+         <value>5</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="EUSART1" registerAlias="RCSTA" settingAlias="SREN" alias="disabled"/>
@@ -4726,8 +5586,20 @@
          <value>256</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCAP" settingAlias="ADCAP" alias="Additional uC of 22pF"/>
+         <value>22</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="INLVLC" settingAlias="INLVLC4" alias="ST_input"/>
          <value>1</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCON2" settingAlias="ADPSIS" alias="FLTR"/>
+         <value>1</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADCC" name="actpinEnable"/>
+         <value>disabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="System Module" registerAlias="CONFIG1" settingAlias="CSWEN" alias="OFF"/>
@@ -4762,6 +5634,10 @@
          <value>0</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADCC" name="PrechargeTime"/>
+         <value>0.0</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="EUSART1" registerAlias="RCI" settingAlias="enable"/>
          <value>enabled</value>
       </entry>
@@ -4774,12 +5650,24 @@
          <value>0</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="ADCC" registerAlias="ADCAP"/>
+         <value>0</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="CCP2" registerAlias="CCPCAP" settingAlias="CTS" alias="LC4_OUT"/>
          <value>7</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="Pin Module" registerAlias="SSP1SSPPS"/>
          <value>22</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADCC" registerAlias="ADCON0" settingAlias="ADFM"/>
+         <value>right</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADCC" registerAlias="ADLTHH" settingAlias="ADLTHH"/>
+         <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="System Module" registerAlias="CONFIG4" settingAlias="LVP" alias="OFF"/>
@@ -4798,12 +5686,12 @@
          <value>disabled</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="TMR0" registerAlias="T0CON1" settingAlias="T0CKPS" alias="1:16384"/>
-         <value>14</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="SCL1%isActiveBidirectional"/>
          <value>enabled</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="TMR0" registerAlias="T0CON1" settingAlias="T0CKPS" alias="1:16384"/>
+         <value>14</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="CCP3" name="validateTMR2"/>
@@ -4850,8 +5738,16 @@
          <value>16</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="ADCC" registerAlias="ADSTPTH"/>
+         <value>0</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="System Module" registerAlias="CONFIG2" settingAlias="MCLRE"/>
          <value>ON</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCAP" settingAlias="ADCAP" alias="Additional uC of 14pF"/>
+         <value>14</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="LATA" settingAlias="LATA4"/>
@@ -4870,12 +5766,16 @@
          <value>-1</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="CCP1" name="captureMode"/>
-         <value>Every edge</value>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADCC" name="tadValue"/>
+         <value>1.7 us</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="MSSP1" registerAlias="SSPBUF"/>
          <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="CCP1" name="captureMode"/>
+         <value>Every edge</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="TMR2" registerAlias="TMRI" settingAlias="order"/>
@@ -4946,6 +5846,10 @@
          <value>100000</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADCC" registerAlias="ADPCH" settingAlias="ADCHS"/>
+         <value>ANA0</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="CCP4" registerAlias="CCPRH" settingAlias="CCPRH"/>
          <value>0</value>
       </entry>
@@ -4986,6 +5890,10 @@
          <value>0</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCON0" settingAlias="ADCS" alias="FOSC/ADCLK"/>
+         <value>0</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="TMR2" registerAlias="THLT" settingAlias="TMODE" alias="Starts at T2ON = 1 and TMR2_ers = 0"/>
          <value>2</value>
       </entry>
@@ -5020,6 +5928,10 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="PMD" registerAlias="PMD3" settingAlias="ADCMD"/>
          <value>ADC enabled</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCAP" settingAlias="ADCAP" alias="Additional uC of 27pF"/>
+         <value>27</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="MSSP1" registerAlias="SSPCON2" settingAlias="GCEN" alias="disabled"/>
@@ -5118,6 +6030,10 @@
          <value>0</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCON2" settingAlias="ADPSIS" alias="RES"/>
+         <value>0</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="EUSART1" registerAlias="RCSTA" settingAlias="OERR" alias="error"/>
          <value>1</value>
       </entry>
@@ -5164,6 +6080,10 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="CCP2" name="validateTMR1"/>
          <value/>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="ADCC" registerAlias="ADSTPTL"/>
+         <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="CCP4" registerAlias="CCPCAP" settingAlias="CTS" alias="LC3_OUT"/>
@@ -5238,6 +6158,10 @@
          <value>CCP4 enabled</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCON0" settingAlias="ADFM" alias="left"/>
+         <value>0</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="System Module" registerAlias="CONFIG4" settingAlias="WRTAPP" alias="ON"/>
          <value>0</value>
       </entry>
@@ -5246,12 +6170,20 @@
          <value>disabled</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCAP" settingAlias="ADCAP" alias="Additional uC of 9pF"/>
+         <value>9</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="INLVLC" settingAlias="INLVLC3"/>
          <value>ST_input</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="IOCAN" settingAlias="IOCAN2"/>
          <value>disabled</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCON1" settingAlias="ADPPOL" alias="Vss"/>
+         <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="IOCCP" settingAlias="IOCCP4"/>
@@ -5278,8 +6210,16 @@
          <value>0</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="ADCC" registerAlias="ADACT"/>
+         <value>0</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="SLRCONA" settingAlias="SLRA4"/>
          <value>limited</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCAP" settingAlias="ADCAP" alias="Additional uC of 18pF"/>
+         <value>18</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="LATA" settingAlias="LATA0"/>
@@ -5334,6 +6274,10 @@
          <value>0</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCON3" settingAlias="ADTMD" alias="ADERR &lt; ADLTH"/>
+         <value>1</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="INLVLC" settingAlias="INLVLC2"/>
          <value>ST_input</value>
       </entry>
@@ -5346,8 +6290,16 @@
          <value>5</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADCC" name="DAC1_Output"/>
+         <value>channel_DAC1_Output</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PMD" registerAlias="PMD0" settingAlias="IOCMD" alias="IOC enabled"/>
          <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCON0" settingAlias="ADFM" alias="right"/>
+         <value>1</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="IOCCP" settingAlias="IOCCP3"/>
@@ -5384,6 +6336,10 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="EUSART1" name="EUSART1_RCIISRFunction"/>
          <value>RxDefaultInterruptHandler</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADCC" registerAlias="ADCON3" settingAlias="ADCALC"/>
+         <value>Filtered value vs setpoint</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="CCP4" registerAlias="CCPI" settingAlias="flag"/>
@@ -5450,12 +6406,12 @@
          <value>1</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="CK1%isActiveBidirectional"/>
-         <value>disabled</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="CCP3" registerAlias="CCPCON" settingAlias="CCPM" alias="Toggle_cleartmr"/>
          <value>1</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="CK1%isActiveBidirectional"/>
+         <value>disabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="SSP1DATPPS" settingAlias="SSP1DATPPS"/>
@@ -5538,7 +6494,15 @@
          <value>14</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCON1" settingAlias="ADDSEN" alias="enabled"/>
+         <value>1</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="SLRCONC" settingAlias="SLRC5" alias="maximum"/>
+         <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="ADCC" registerAlias="ADCNT"/>
          <value>0</value>
       </entry>
       <entry>
@@ -5556,6 +6520,10 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PMD" registerAlias="PMD4" settingAlias="CCP2MD" alias="CCP2 enabled"/>
          <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADCC" registerAlias="ADCON1" settingAlias="ADPPOL"/>
+         <value>Vss</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="INLVLC" settingAlias="INLVLC4"/>
@@ -5586,6 +6554,14 @@
          <value>0</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="ADCC" registerAlias="ADREF"/>
+         <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADPCH" settingAlias="ADCHS" alias="Temp_Sensor"/>
+         <value>60</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="ODCONC" settingAlias="ODCC6" alias="enabled"/>
          <value>1</value>
       </entry>
@@ -5594,12 +6570,16 @@
          <value>64</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="CCP3" registerAlias="CCPTMRS"/>
+         <value>16</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="EUSART1" registerAlias="RCSTA" settingAlias="RX9" alias="9-bit"/>
          <value>1</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="CCP3" registerAlias="CCPTMRS"/>
-         <value>16</value>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADCC" registerAlias="ADPREL" settingAlias="ADPREL"/>
+         <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="IOCCF" settingAlias="IOCCF3" alias="enabled"/>
@@ -5638,12 +6618,24 @@
          <value>1</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADPCH" settingAlias="ADCHS" alias="DAC1_Output"/>
+         <value>61</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADSTAT" settingAlias="ADMATH" alias="registers not updated"/>
+         <value>0</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="ODCONB" settingAlias="ODCB7" alias="enabled"/>
          <value>1</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="MSSP1" name="firstOccurenceSSPI"/>
          <value>enabled</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCON3" settingAlias="ADCALC" alias="First derivative of filtered value"/>
+         <value>4</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="ANSELC" settingAlias="ANSC1"/>
@@ -5730,12 +6722,24 @@
          <value>-1</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADCC" registerAlias="ADTI" settingAlias="order"/>
+         <value>-1</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="INTERNAL OSCILLATOR" registerAlias="OSCCON3" settingAlias="ORDY" alias="clock=NOSC"/>
          <value>1</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="CCP4" registerAlias="CCPCON" settingAlias="EN" alias="enabled"/>
          <value>1</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCAP" settingAlias="ADCAP" alias="Additional uC of 6pF"/>
+         <value>6</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCON1" settingAlias="ADGPOL" alias="digital_low"/>
+         <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="System Module" registerAlias="CONFIG4" settingAlias="SAFEN" alias="OFF"/>
@@ -5752,6 +6756,10 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="CCP3" name="CCP3_CCPIISRFunction"/>
          <value>ISR</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADSTAT" settingAlias="ADLTHR" alias="ADERR &lt; ADLTH"/>
+         <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="TMR0" registerAlias="T0CON1" settingAlias="T0ASYNC" alias="synchronised"/>
@@ -5866,6 +6874,14 @@
          <value>1</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS"/>
+         <value>FOSC/2</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADCC" registerAlias="ADSTAT" settingAlias="ADSTAT"/>
+         <value>not converting</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="System Module" registerAlias="CONFIG4" settingAlias="WRTC" alias="ON"/>
          <value>0</value>
       </entry>
@@ -5914,6 +6930,14 @@
          <value>enabled</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCAP" settingAlias="ADCAP" alias="Additional uC of 2pF"/>
+         <value>2</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADCC" registerAlias="ADREF" settingAlias="ADNREF"/>
+         <value>VSS</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="IOCCF" settingAlias="IOCCF4" alias="disabled"/>
          <value>0</value>
       </entry>
@@ -5930,8 +6954,16 @@
          <value>disabled</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADCC" registerAlias="ADTI" settingAlias="flag"/>
+         <value>disabled</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="IOCAF" settingAlias="IOCAF1" alias="enabled"/>
          <value>1</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCON3" settingAlias="ADTMD" alias="ADERR &gt; ADLTH and ADERR &lt; ADUTH"/>
+         <value>3</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="CCP4" registerAlias="CCPCON" settingAlias="CCPOUT"/>
@@ -5982,6 +7014,14 @@
          <value>2</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADCC" registerAlias="ADUTHL" settingAlias="ADUTHL"/>
+         <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADCC" registerAlias="ADCON2" settingAlias="ADMD"/>
+         <value>Low_pass_filter_mode</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="INTERNAL OSCILLATOR" name="SOSCO"/>
          <value>disabled</value>
       </entry>
@@ -6003,7 +7043,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="Custom Name RB7"/>
-         <value/>
+         <value>channel_ANB7</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="System Module" registerAlias="CONFIG4" settingAlias="WRTSAF" alias="ON"/>
@@ -6016,6 +7056,10 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="IOCBF" settingAlias="IOCBF7"/>
          <value>disabled</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCON0" settingAlias="GO_nDONE" alias="start"/>
+         <value>1</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="Custom Name RB4"/>
@@ -6062,6 +7106,10 @@
          <value>13</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCAP" settingAlias="ADCAP" alias="Additional uC of 30pF"/>
+         <value>30</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="IOCAF" settingAlias="IOCAF2" alias="disabled"/>
          <value>0</value>
       </entry>
@@ -6100,6 +7148,10 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="EUSART1" registerAlias="TXSTA" settingAlias="BRGH"/>
          <value>hi_speed</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCON3" settingAlias="ADTMD" alias="ADERR &gt;= ADLTH"/>
+         <value>2</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="System Module" registerAlias="CONFIG3" settingAlias="WDTCPS" alias="WDTCPS_10"/>
@@ -6142,6 +7194,10 @@
          <value>0</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADACT" settingAlias="ADACT" alias="ADPCH"/>
+         <value>31</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="TRISC" settingAlias="TRISC2" alias="input"/>
          <value>1</value>
       </entry>
@@ -6150,8 +7206,16 @@
          <value>1</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCAP" settingAlias="ADCAP" alias="Additional uC of 21pF"/>
+         <value>21</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="TMR0" registerAlias="T0CON0" settingAlias="T016BIT" alias="16-bit"/>
          <value>1</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADCC" registerAlias="ADACCU" settingAlias="ADACCU"/>
+         <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="TMR2" registerAlias="TCLKCON" settingAlias="TCS" alias="ZCD_OUT"/>
@@ -6162,12 +7226,28 @@
          <value>1</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADPCH" settingAlias="ADCHS" alias="ANA4"/>
+         <value>4</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADPCH" settingAlias="ADCHS" alias="ANA1"/>
+         <value>1</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADPCH" settingAlias="ADCHS" alias="ANA2"/>
+         <value>2</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="CCP3" registerAlias="CCPCON" settingAlias="CCPM" alias="16th rising edge"/>
          <value>7</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="TMR2" registerAlias="TTMR"/>
          <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADPCH" settingAlias="ADCHS" alias="ANA5"/>
+         <value>5</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="IOCBF" settingAlias="IOCBF6"/>
@@ -6188,6 +7268,10 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="anselUserSetRA1"/>
          <value>disabled</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADACT" settingAlias="ADACT" alias="NCO1"/>
+         <value>16</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="anselUserSetRA2"/>
@@ -6214,16 +7298,40 @@
          <value>5</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCON2" settingAlias="ADMD" alias="Basic_mode"/>
+         <value>0</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="EUSART1" registerAlias="TXSTA" settingAlias="SYNC" alias="asynchronous"/>
          <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADPCH" settingAlias="ADCHS" alias="ANC1"/>
+         <value>17</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="TMR2" registerAlias="TCLKCON" settingAlias="TCS" alias="LFINTOSC"/>
          <value>4</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADPCH" settingAlias="ADCHS" alias="ANC2"/>
+         <value>18</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="System Module" registerAlias="CONFIG4" settingAlias="SAFEN"/>
          <value>OFF</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADPCH" settingAlias="ADCHS" alias="ANC0"/>
+         <value>16</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADPCH" settingAlias="ADCHS" alias="ANB4"/>
+         <value>12</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADPCH" settingAlias="ADCHS" alias="ANB5"/>
+         <value>13</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="IOCCF" settingAlias="IOCCF6" alias="enabled"/>
@@ -6234,8 +7342,20 @@
          <value>1</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADPCH" settingAlias="ADCHS" alias="ANB6"/>
+         <value>14</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADPCH" settingAlias="ADCHS" alias="ANB7"/>
+         <value>15</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="anselUserSetRB4"/>
          <value>disabled</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADACT" settingAlias="ADACT" alias="TMR0"/>
+         <value>2</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="anselUserSetRB5"/>
@@ -6254,12 +7374,40 @@
          <value>0</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADACT" settingAlias="ADACT" alias="TMR4"/>
+         <value>6</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADACT" settingAlias="ADACT" alias="TMR3"/>
+         <value>5</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADACT" settingAlias="ADACT" alias="TMR2"/>
+         <value>4</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADACT" settingAlias="ADACT" alias="TMR1"/>
+         <value>3</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="Pin Module" registerAlias="RC4PPS"/>
          <value>12</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADACT" settingAlias="ADACT" alias="TMR6"/>
+         <value>8</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADACT" settingAlias="ADACT" alias="TMR5"/>
+         <value>7</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADCC" registerAlias="ADCON0" settingAlias="ADCONT"/>
+         <value>enabled</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="Pin Module" registerAlias="ADACTPPS"/>
-         <value>18</value>
+         <value>15</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="anselUserSetRB6"/>
@@ -6267,7 +7415,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="anselUserSetRB7"/>
-         <value>disabled</value>
+         <value>enabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="RA5PPS" settingAlias="RA5PPS"/>
@@ -6286,6 +7434,22 @@
          <value>500000</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADPCH" settingAlias="ADCHS" alias="ANC5"/>
+         <value>21</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADPCH" settingAlias="ADCHS" alias="ANC6"/>
+         <value>22</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADPCH" settingAlias="ADCHS" alias="ANC3"/>
+         <value>19</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADPCH" settingAlias="ADCHS" alias="ANC4"/>
+         <value>20</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="IOCAF" settingAlias="IOCAF2" alias="enabled"/>
          <value>1</value>
       </entry>
@@ -6296,6 +7460,10 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="CCP4" registerAlias="CCPCON" settingAlias="CCPM" alias="off/reset"/>
          <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADPCH" settingAlias="ADCHS" alias="ANC7"/>
+         <value>23</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="anselUserSetRC5"/>
@@ -6344,6 +7512,10 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PMD" registerAlias="PMD2" settingAlias="NCO1MD" alias="NCO1 disabled"/>
          <value>1</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADACT" settingAlias="ADACT" alias="disabled"/>
+         <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="CCP4" name="captureMode"/>
@@ -6430,8 +7602,20 @@
          <value>0</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADACT" settingAlias="ADACT" alias="CLC2"/>
+         <value>21</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="CCP3" name="captureMode"/>
          <value>Every edge</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADACT" settingAlias="ADACT" alias="CLC3"/>
+         <value>22</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADACT" settingAlias="ADACT" alias="CLC4"/>
+         <value>23</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PMD" registerAlias="PMD1" settingAlias="TMR1MD" alias="TMR1 enabled"/>
@@ -6450,8 +7634,20 @@
          <value>21</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADACT" settingAlias="ADACT" alias="CLC1"/>
+         <value>20</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="ANSELC" settingAlias="ANSC3"/>
          <value>analog</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCAP" settingAlias="ADCAP" alias="Additional uC of 12pF"/>
+         <value>12</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADCC" name="dependentModuleKey"/>
+         <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="IOCBF" settingAlias="IOCBF4"/>
@@ -6470,8 +7666,20 @@
          <value>4</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADACT" settingAlias="ADACT" alias="Logical OR of all IOC flags"/>
+         <value>19</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="MSSP1" registerAlias="SSPCON1" settingAlias="SSPM" alias="TMR2/2"/>
          <value>3</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADREF" settingAlias="ADPREF" alias="VDD"/>
+         <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCON3" settingAlias="ADTMD" alias="ADERR &gt; ADUTH"/>
+         <value>6</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PMD" registerAlias="PMD1" settingAlias="TMR2MD" alias="TMR2 enabled"/>
@@ -6480,6 +7688,10 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="INTERNAL OSCILLATOR" registerAlias="OSCCON3" settingAlias="SOSCPWR" alias="High power"/>
          <value>1</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADCC" registerAlias="ADRESH" settingAlias="ADRESH"/>
+         <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="TRISB" settingAlias="TRISB5"/>
@@ -6502,8 +7714,16 @@
          <value>1</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADCC" name="Temp_Sensor"/>
+         <value>channel_Temp_Sensor</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="INTERNAL OSCILLATOR" registerAlias="OSCEN" settingAlias="ADOEN" alias="enabled"/>
          <value>1</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADACT" settingAlias="ADACT" alias="CCP4"/>
+         <value>13</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="IOCCF" settingAlias="IOCCF5" alias="enabled"/>
@@ -6526,8 +7746,20 @@
          <value>13</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADACT" settingAlias="ADACT" alias="CCP1"/>
+         <value>10</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADACT" settingAlias="ADACT" alias="CCP2"/>
+         <value>11</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="EUSART1" registerAlias="BAUDCON" settingAlias="WUE" alias="enabled"/>
          <value>1</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADACT" settingAlias="ADACT" alias="CCP3"/>
+         <value>12</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="EUSART1" registerAlias="TXSTA" settingAlias="SENDB" alias="sync_break_complete"/>
@@ -6546,12 +7778,24 @@
          <value>1</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADPCH" settingAlias="ADCHS" alias="ANA0"/>
+         <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCON2" settingAlias="ADMD" alias="Accumulate_mode"/>
+         <value>1</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="IOCAF" settingAlias="IOCAF3" alias="enabled"/>
          <value>1</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="IOCBF" settingAlias="IOCBF6" alias="disabled"/>
          <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADCC" registerAlias="ADCON0" settingAlias="ADCS"/>
+         <value>Frc</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="CCP2" name="captureMode"/>
@@ -6650,6 +7894,10 @@
          <value>0</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADCC" name="AquisitionCount"/>
+         <value>0</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="MSSP1" registerAlias="SSPCON1" settingAlias="SSPM"/>
          <value>FOSC/4_SSPxADD_I2C</value>
       </entry>
@@ -6730,6 +7978,10 @@
          <value>0</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCON0" settingAlias="GO_nDONE" alias="stop"/>
+         <value>0</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="MSSP1" registerAlias="SSPSTAT" settingAlias="SMP"/>
          <value>High Speed</value>
       </entry>
@@ -6766,12 +8018,20 @@
          <value>0</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCON0" settingAlias="ADON" alias="disabled"/>
+         <value>0</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="TRISA" settingAlias="TRISA4" alias="output"/>
          <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="Pin Module" registerAlias="SSP2SSPPS"/>
          <value>1</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCAP" settingAlias="ADCAP" alias="Additional uC of 13pF"/>
+         <value>13</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="MSSP1" registerAlias="SSPCON1" settingAlias="SSPOV" alias="overflow"/>
@@ -6784,6 +8044,10 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="CCP4" registerAlias="CCPCON" settingAlias="CCPM" alias="Toggle_cleartmr"/>
          <value>1</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="ADACTPPS%aux6"/>
+         <value>%DESELECT%</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="T5GPPS" settingAlias="T5GPPS"/>
@@ -6820,6 +8084,10 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="EUSART1" registerAlias="RCSTA"/>
          <value>144</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADACT" settingAlias="ADACT" alias="ADERRH"/>
+         <value>28</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="CCP4" name="ccpOutputPin"/>
@@ -6890,6 +8158,10 @@
          <value>2048</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADCC" registerAlias="ADI" settingAlias="order"/>
+         <value>-1</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="Pin Module" registerAlias="SLRCONC"/>
          <value>255</value>
       </entry>
@@ -6912,6 +8184,14 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="MSSP1" registerAlias="SSPCON3" settingAlias="SBCDE" alias="disabled"/>
          <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCAP" settingAlias="ADCAP" alias="Additional uC of 26pF"/>
+         <value>26</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCON0" settingAlias="ADCS" alias="Frc"/>
+         <value>1</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PMD" registerAlias="PMD6" settingAlias="U1MD" alias="EUSART1 disabled"/>
@@ -7038,6 +8318,10 @@
          <value>32</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="ADCC" registerAlias="ADCON1"/>
+         <value>0</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="EUSART1" name="templateNameValue"/>
          <value>eusart_interrupt</value>
       </entry>
@@ -7100,6 +8384,10 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="TRISA" settingAlias="TRISA2" alias="output"/>
          <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="ADCC" registerAlias="ADCON0"/>
+         <value>212</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PMD" registerAlias="PMD7" settingAlias="SMT1MD" alias="SMT1 enabled"/>
@@ -7238,6 +8526,10 @@
          <value>2</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCAP" settingAlias="ADCAP" alias="Additional uC of 17pF"/>
+         <value>17</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="INTERNAL OSCILLATOR" registerAlias="OSCCON1" settingAlias="NDIV" alias="4"/>
          <value>2</value>
       </entry>
@@ -7326,6 +8618,10 @@
          <value>0</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCON1" settingAlias="ADIPEN" alias="enabled"/>
+         <value>1</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PMD" registerAlias="PMD0" settingAlias="IOCMD" alias="IOC disabled"/>
          <value>1</value>
       </entry>
@@ -7366,12 +8662,20 @@
          <value>OFF</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCON1" settingAlias="ADIPEN" alias="disabled"/>
+         <value>0</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="CCP1" name="CCP1_CCPIISRFunction"/>
          <value>ISR</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="MSSP1" name="urlSlaveMask"/>
          <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADCON0" settingAlias="ADON" alias="enabled"/>
+         <value>1</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="System Module" registerAlias="CONFIG2" settingAlias="LPBOREN"/>
@@ -7530,7 +8834,7 @@
          <value>16159</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="T0CKIPPS%aux6"/>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="T0CKIPPS%aux5"/>
          <value>%DESELECT%</value>
       </entry>
       <entry>
@@ -7566,6 +8870,14 @@
          <value>1</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADCC" name="SetPointCount"/>
+         <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADCC" name="Vss"/>
+         <value>channel_Vss</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="EUSART1" name="useStdio"/>
          <value>disabled</value>
       </entry>
@@ -7588,12 +8900,16 @@
          <hash>e06ebe16b0e9c6e661cfe9867279e9a537f5db05156b99b96bba4efbc93ee98e</hash>
       </entry>
       <entry>
+         <file>mcc_generated_files\adcc.c</file>
+         <hash>dcb9ec0f0c08e0b3eaadf3c54beaf31edd1f86932de14b4529829f7e1f373168</hash>
+      </entry>
+      <entry>
          <file>mcc_generated_files\mcc.c</file>
-         <hash>a1c3a3e0dec7a2050fe835236251a23c5a1e7b3e83af735ba73406e551f9688e</hash>
+         <hash>6fdead6021f7d3140802f71691c211c41bfcde56c8ea939c36f62582958e849f</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\mcc.h</file>
-         <hash>5d3ec1eba43f1569e56371b1b9a4dd178ef28f4e22656fc7fc4684a727870dde</hash>
+         <hash>ce364a67db2729a924cc4229efd2422c8ab9083e6bd2664eb2f232a11579ddef</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\device_config.h</file>
@@ -7616,12 +8932,16 @@
          <hash>c1d2984d368d662d6264fcb5a90a0ddbe4ff80223020de8fcbde57cf12f22a3d</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\pin_manager.h</file>
-         <hash>6dc521f7af762f7c54b458a031426982e32fb9064897065b5ae404cfbb655980</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files\tmr2.c</file>
          <hash>76793a60203d8ccd5f891389a21c37d7696de40b7e06b94a8d4eef0f81fef566</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\pin_manager.h</file>
+         <hash>492c2a4204886643f7485599a5b6540f7f4f49fead5c0a25fc9b4be2764fe5c5</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\adcc.h</file>
+         <hash>b6706b17f5ce871486d2a004a4e72b326e36a1b6aae15f88fb3b2f4cf7200673</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\tmr0.c</file>
@@ -7648,12 +8968,12 @@
          <hash>335bed0a83701c9239e34837881058ede78b964283501caff442dd16b7b3d9ba</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\interrupt_manager.c</file>
-         <hash>29f10e442ececad11c5346bf86b294b7c16614909f35a86cc07754a57977a374</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files\pwm4.h</file>
          <hash>3cad79ce7319314901906390f422526acc5a75a47f5b7b1e609827883af1c319</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\interrupt_manager.c</file>
+         <hash>bcf2bc2fe4b60c6af17cdb5fcb6ef3598ad699c2beb7a403bb0f7a6c7749fa9e</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\pwm2.c</file>

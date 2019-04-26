@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=mcc_generated_files/eusart1.c mcc_generated_files/device_config.c mcc_generated_files/interrupt_manager.c mcc_generated_files/mcc.c mcc_generated_files/pin_manager.c mcc_generated_files/tmr0.c mcc_generated_files/pwm3.c mcc_generated_files/pwm4.c mcc_generated_files/pwm1.c mcc_generated_files/pwm2.c mcc_generated_files/tmr2.c mcc_generated_files/i2c1.c PWM.c main.c clock.c TM1650.c controller.c buttons.c ../Lab_8/Lab_8.X/beat.c
+SOURCEFILES_QUOTED_IF_SPACED=mcc_generated_files/eusart1.c mcc_generated_files/device_config.c mcc_generated_files/interrupt_manager.c mcc_generated_files/mcc.c mcc_generated_files/pin_manager.c mcc_generated_files/tmr0.c mcc_generated_files/pwm3.c mcc_generated_files/pwm4.c mcc_generated_files/pwm1.c mcc_generated_files/pwm2.c mcc_generated_files/tmr2.c mcc_generated_files/i2c1.c mcc_generated_files/adcc.c main.c clock.c TM1650.c controller.c buttons.c beat.c LED.c DMX.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/mcc_generated_files/eusart1.p1 ${OBJECTDIR}/mcc_generated_files/device_config.p1 ${OBJECTDIR}/mcc_generated_files/interrupt_manager.p1 ${OBJECTDIR}/mcc_generated_files/mcc.p1 ${OBJECTDIR}/mcc_generated_files/pin_manager.p1 ${OBJECTDIR}/mcc_generated_files/tmr0.p1 ${OBJECTDIR}/mcc_generated_files/pwm3.p1 ${OBJECTDIR}/mcc_generated_files/pwm4.p1 ${OBJECTDIR}/mcc_generated_files/pwm1.p1 ${OBJECTDIR}/mcc_generated_files/pwm2.p1 ${OBJECTDIR}/mcc_generated_files/tmr2.p1 ${OBJECTDIR}/mcc_generated_files/i2c1.p1 ${OBJECTDIR}/PWM.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/clock.p1 ${OBJECTDIR}/TM1650.p1 ${OBJECTDIR}/controller.p1 ${OBJECTDIR}/buttons.p1 ${OBJECTDIR}/_ext/1713254680/beat.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/mcc_generated_files/eusart1.p1.d ${OBJECTDIR}/mcc_generated_files/device_config.p1.d ${OBJECTDIR}/mcc_generated_files/interrupt_manager.p1.d ${OBJECTDIR}/mcc_generated_files/mcc.p1.d ${OBJECTDIR}/mcc_generated_files/pin_manager.p1.d ${OBJECTDIR}/mcc_generated_files/tmr0.p1.d ${OBJECTDIR}/mcc_generated_files/pwm3.p1.d ${OBJECTDIR}/mcc_generated_files/pwm4.p1.d ${OBJECTDIR}/mcc_generated_files/pwm1.p1.d ${OBJECTDIR}/mcc_generated_files/pwm2.p1.d ${OBJECTDIR}/mcc_generated_files/tmr2.p1.d ${OBJECTDIR}/mcc_generated_files/i2c1.p1.d ${OBJECTDIR}/PWM.p1.d ${OBJECTDIR}/main.p1.d ${OBJECTDIR}/clock.p1.d ${OBJECTDIR}/TM1650.p1.d ${OBJECTDIR}/controller.p1.d ${OBJECTDIR}/buttons.p1.d ${OBJECTDIR}/_ext/1713254680/beat.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/mcc_generated_files/eusart1.p1 ${OBJECTDIR}/mcc_generated_files/device_config.p1 ${OBJECTDIR}/mcc_generated_files/interrupt_manager.p1 ${OBJECTDIR}/mcc_generated_files/mcc.p1 ${OBJECTDIR}/mcc_generated_files/pin_manager.p1 ${OBJECTDIR}/mcc_generated_files/tmr0.p1 ${OBJECTDIR}/mcc_generated_files/pwm3.p1 ${OBJECTDIR}/mcc_generated_files/pwm4.p1 ${OBJECTDIR}/mcc_generated_files/pwm1.p1 ${OBJECTDIR}/mcc_generated_files/pwm2.p1 ${OBJECTDIR}/mcc_generated_files/tmr2.p1 ${OBJECTDIR}/mcc_generated_files/i2c1.p1 ${OBJECTDIR}/mcc_generated_files/adcc.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/clock.p1 ${OBJECTDIR}/TM1650.p1 ${OBJECTDIR}/controller.p1 ${OBJECTDIR}/buttons.p1 ${OBJECTDIR}/beat.p1 ${OBJECTDIR}/LED.p1 ${OBJECTDIR}/DMX.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/mcc_generated_files/eusart1.p1.d ${OBJECTDIR}/mcc_generated_files/device_config.p1.d ${OBJECTDIR}/mcc_generated_files/interrupt_manager.p1.d ${OBJECTDIR}/mcc_generated_files/mcc.p1.d ${OBJECTDIR}/mcc_generated_files/pin_manager.p1.d ${OBJECTDIR}/mcc_generated_files/tmr0.p1.d ${OBJECTDIR}/mcc_generated_files/pwm3.p1.d ${OBJECTDIR}/mcc_generated_files/pwm4.p1.d ${OBJECTDIR}/mcc_generated_files/pwm1.p1.d ${OBJECTDIR}/mcc_generated_files/pwm2.p1.d ${OBJECTDIR}/mcc_generated_files/tmr2.p1.d ${OBJECTDIR}/mcc_generated_files/i2c1.p1.d ${OBJECTDIR}/mcc_generated_files/adcc.p1.d ${OBJECTDIR}/main.p1.d ${OBJECTDIR}/clock.p1.d ${OBJECTDIR}/TM1650.p1.d ${OBJECTDIR}/controller.p1.d ${OBJECTDIR}/buttons.p1.d ${OBJECTDIR}/beat.p1.d ${OBJECTDIR}/LED.p1.d ${OBJECTDIR}/DMX.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/mcc_generated_files/eusart1.p1 ${OBJECTDIR}/mcc_generated_files/device_config.p1 ${OBJECTDIR}/mcc_generated_files/interrupt_manager.p1 ${OBJECTDIR}/mcc_generated_files/mcc.p1 ${OBJECTDIR}/mcc_generated_files/pin_manager.p1 ${OBJECTDIR}/mcc_generated_files/tmr0.p1 ${OBJECTDIR}/mcc_generated_files/pwm3.p1 ${OBJECTDIR}/mcc_generated_files/pwm4.p1 ${OBJECTDIR}/mcc_generated_files/pwm1.p1 ${OBJECTDIR}/mcc_generated_files/pwm2.p1 ${OBJECTDIR}/mcc_generated_files/tmr2.p1 ${OBJECTDIR}/mcc_generated_files/i2c1.p1 ${OBJECTDIR}/PWM.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/clock.p1 ${OBJECTDIR}/TM1650.p1 ${OBJECTDIR}/controller.p1 ${OBJECTDIR}/buttons.p1 ${OBJECTDIR}/_ext/1713254680/beat.p1
+OBJECTFILES=${OBJECTDIR}/mcc_generated_files/eusart1.p1 ${OBJECTDIR}/mcc_generated_files/device_config.p1 ${OBJECTDIR}/mcc_generated_files/interrupt_manager.p1 ${OBJECTDIR}/mcc_generated_files/mcc.p1 ${OBJECTDIR}/mcc_generated_files/pin_manager.p1 ${OBJECTDIR}/mcc_generated_files/tmr0.p1 ${OBJECTDIR}/mcc_generated_files/pwm3.p1 ${OBJECTDIR}/mcc_generated_files/pwm4.p1 ${OBJECTDIR}/mcc_generated_files/pwm1.p1 ${OBJECTDIR}/mcc_generated_files/pwm2.p1 ${OBJECTDIR}/mcc_generated_files/tmr2.p1 ${OBJECTDIR}/mcc_generated_files/i2c1.p1 ${OBJECTDIR}/mcc_generated_files/adcc.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/clock.p1 ${OBJECTDIR}/TM1650.p1 ${OBJECTDIR}/controller.p1 ${OBJECTDIR}/buttons.p1 ${OBJECTDIR}/beat.p1 ${OBJECTDIR}/LED.p1 ${OBJECTDIR}/DMX.p1
 
 # Source Files
-SOURCEFILES=mcc_generated_files/eusart1.c mcc_generated_files/device_config.c mcc_generated_files/interrupt_manager.c mcc_generated_files/mcc.c mcc_generated_files/pin_manager.c mcc_generated_files/tmr0.c mcc_generated_files/pwm3.c mcc_generated_files/pwm4.c mcc_generated_files/pwm1.c mcc_generated_files/pwm2.c mcc_generated_files/tmr2.c mcc_generated_files/i2c1.c PWM.c main.c clock.c TM1650.c controller.c buttons.c ../Lab_8/Lab_8.X/beat.c
+SOURCEFILES=mcc_generated_files/eusart1.c mcc_generated_files/device_config.c mcc_generated_files/interrupt_manager.c mcc_generated_files/mcc.c mcc_generated_files/pin_manager.c mcc_generated_files/tmr0.c mcc_generated_files/pwm3.c mcc_generated_files/pwm4.c mcc_generated_files/pwm1.c mcc_generated_files/pwm2.c mcc_generated_files/tmr2.c mcc_generated_files/i2c1.c mcc_generated_files/adcc.c main.c clock.c TM1650.c controller.c buttons.c beat.c LED.c DMX.c
 
 
 CFLAGS=
@@ -189,13 +189,13 @@ ${OBJECTDIR}/mcc_generated_files/i2c1.p1: mcc_generated_files/i2c1.c  nbproject/
 	@-${MV} ${OBJECTDIR}/mcc_generated_files/i2c1.d ${OBJECTDIR}/mcc_generated_files/i2c1.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/mcc_generated_files/i2c1.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/PWM.p1: PWM.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/PWM.p1.d 
-	@${RM} ${OBJECTDIR}/PWM.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/PWM.p1 PWM.c 
-	@-${MV} ${OBJECTDIR}/PWM.d ${OBJECTDIR}/PWM.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/PWM.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+${OBJECTDIR}/mcc_generated_files/adcc.p1: mcc_generated_files/adcc.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/mcc_generated_files" 
+	@${RM} ${OBJECTDIR}/mcc_generated_files/adcc.p1.d 
+	@${RM} ${OBJECTDIR}/mcc_generated_files/adcc.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/mcc_generated_files/adcc.p1 mcc_generated_files/adcc.c 
+	@-${MV} ${OBJECTDIR}/mcc_generated_files/adcc.d ${OBJECTDIR}/mcc_generated_files/adcc.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/mcc_generated_files/adcc.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 ${OBJECTDIR}/main.p1: main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
@@ -237,13 +237,29 @@ ${OBJECTDIR}/buttons.p1: buttons.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/buttons.d ${OBJECTDIR}/buttons.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/buttons.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/1713254680/beat.p1: ../Lab_8/Lab_8.X/beat.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1713254680" 
-	@${RM} ${OBJECTDIR}/_ext/1713254680/beat.p1.d 
-	@${RM} ${OBJECTDIR}/_ext/1713254680/beat.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/_ext/1713254680/beat.p1 ../Lab_8/Lab_8.X/beat.c 
-	@-${MV} ${OBJECTDIR}/_ext/1713254680/beat.d ${OBJECTDIR}/_ext/1713254680/beat.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/_ext/1713254680/beat.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+${OBJECTDIR}/beat.p1: beat.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/beat.p1.d 
+	@${RM} ${OBJECTDIR}/beat.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/beat.p1 beat.c 
+	@-${MV} ${OBJECTDIR}/beat.d ${OBJECTDIR}/beat.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/beat.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/LED.p1: LED.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/LED.p1.d 
+	@${RM} ${OBJECTDIR}/LED.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/LED.p1 LED.c 
+	@-${MV} ${OBJECTDIR}/LED.d ${OBJECTDIR}/LED.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/LED.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/DMX.p1: DMX.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/DMX.p1.d 
+	@${RM} ${OBJECTDIR}/DMX.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/DMX.p1 DMX.c 
+	@-${MV} ${OBJECTDIR}/DMX.d ${OBJECTDIR}/DMX.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/DMX.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 else
 ${OBJECTDIR}/mcc_generated_files/eusart1.p1: mcc_generated_files/eusart1.c  nbproject/Makefile-${CND_CONF}.mk
@@ -342,13 +358,13 @@ ${OBJECTDIR}/mcc_generated_files/i2c1.p1: mcc_generated_files/i2c1.c  nbproject/
 	@-${MV} ${OBJECTDIR}/mcc_generated_files/i2c1.d ${OBJECTDIR}/mcc_generated_files/i2c1.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/mcc_generated_files/i2c1.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/PWM.p1: PWM.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/PWM.p1.d 
-	@${RM} ${OBJECTDIR}/PWM.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/PWM.p1 PWM.c 
-	@-${MV} ${OBJECTDIR}/PWM.d ${OBJECTDIR}/PWM.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/PWM.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+${OBJECTDIR}/mcc_generated_files/adcc.p1: mcc_generated_files/adcc.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/mcc_generated_files" 
+	@${RM} ${OBJECTDIR}/mcc_generated_files/adcc.p1.d 
+	@${RM} ${OBJECTDIR}/mcc_generated_files/adcc.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/mcc_generated_files/adcc.p1 mcc_generated_files/adcc.c 
+	@-${MV} ${OBJECTDIR}/mcc_generated_files/adcc.d ${OBJECTDIR}/mcc_generated_files/adcc.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/mcc_generated_files/adcc.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 ${OBJECTDIR}/main.p1: main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
@@ -390,13 +406,29 @@ ${OBJECTDIR}/buttons.p1: buttons.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/buttons.d ${OBJECTDIR}/buttons.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/buttons.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/1713254680/beat.p1: ../Lab_8/Lab_8.X/beat.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1713254680" 
-	@${RM} ${OBJECTDIR}/_ext/1713254680/beat.p1.d 
-	@${RM} ${OBJECTDIR}/_ext/1713254680/beat.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/_ext/1713254680/beat.p1 ../Lab_8/Lab_8.X/beat.c 
-	@-${MV} ${OBJECTDIR}/_ext/1713254680/beat.d ${OBJECTDIR}/_ext/1713254680/beat.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/_ext/1713254680/beat.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+${OBJECTDIR}/beat.p1: beat.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/beat.p1.d 
+	@${RM} ${OBJECTDIR}/beat.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/beat.p1 beat.c 
+	@-${MV} ${OBJECTDIR}/beat.d ${OBJECTDIR}/beat.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/beat.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/LED.p1: LED.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/LED.p1.d 
+	@${RM} ${OBJECTDIR}/LED.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/LED.p1 LED.c 
+	@-${MV} ${OBJECTDIR}/LED.d ${OBJECTDIR}/LED.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/LED.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/DMX.p1: DMX.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/DMX.p1.d 
+	@${RM} ${OBJECTDIR}/DMX.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/DMX.p1 DMX.c 
+	@-${MV} ${OBJECTDIR}/DMX.d ${OBJECTDIR}/DMX.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/DMX.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 endif
 

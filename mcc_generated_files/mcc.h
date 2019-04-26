@@ -58,6 +58,7 @@
 #include "tmr0.h"
 #include "pwm2.h"
 #include "pwm1.h"
+#include "adcc.h"
 #include "pwm3.h"
 #include "eusart1.h"
 

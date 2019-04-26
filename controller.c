@@ -3,6 +3,7 @@
 #include "buttons.h"
 #include "clock.h"
 #include "TM1650.h"
+#include <stdbool.h>
 
 uint16_t address = 1;
 time_t lastActiveTime;
@@ -43,30 +44,23 @@ void CONTROLLER_task() {
     
     bool active = true; 
     
-   
-    
     
     
     if (BUTTONS_isClicked(up)) {
         address_inc();
-        active = true;
-        
+        active = true;   
     } else if (BUTTONS_isClicked(down)) {
         address_dec();
         active = true;
     } else if (BUTTONS_isHeld(up)) {
         address_inc();
-        active = true;
-        
-        
+        active = true;   
     } else if (BUTTONS_isHeld(down)) {
         address_dec();
         active = true;
     } else {
         active = false;
     }
-    
-    
     
     
     if(active) {

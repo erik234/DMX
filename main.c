@@ -50,29 +50,19 @@
 #include "TM1650.h"
 #include "buttons.h"
 #include "controller.h"
+#include "beat.h"
+#include "DMX.h"
+#include <stdbool.h>
+#include "LED.h"
 
-int dmxPointer = 0;
-uint8_t dmxFrame[514];
+
 
 //This interrupt check for overrun error and allows debugging. Then checks for framing error.
 //The framing error indicates the end of the possible adresses. This then reads the data
 //and puts it into the array. This function sets the the third element as the first address avalible.
 void dmx_isr(void) {
-    if(RC1STAbits.OERR){
-        RC1STAbits.CREN = 0;
-        RC1STAbits.CREN = 1;
-    }
-    
-   if(RC1STAbits.FERR){
-       dmxPointer = 0;
-    }
-   
-   
-    dmxFrame[dmxPointer++] = RC1REG;
-   
+    DMX_handler();
 }
-
-
 
 
 /*
@@ -95,15 +85,19 @@ void main(void)
     
     BUTTONS_init();
     CONTROLLER_init();
-    int i = 0;
+    LED_init();
+    BEAT_init();
+    TRISC5 = 0; 
+    
     while(1)
     {
         BUTTONS_task();
         CONTROLLER_task();
-        LED_setColor(dmxFrame[address] , dmxFrame[address+1] , dmxFrame[address+2] , dmxFrame[address+3]);
+        LED_task();
+        BEAT_task();
+        dmxTimer();//edit back to dmx file.
     }
 }
 /**
  End of File
- * if (time - buttontime > 500) 
 */

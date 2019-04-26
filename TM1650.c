@@ -57,25 +57,25 @@ void TM1650_setDigit(uint8_t didgit, char data, uint8_t DP){
     writeData((didgit + 0x34) , letter);
     
 }
-
-//This is the function this is used for printf. This checks for \r and that we are not writing off teh display
-//This allows for writing strings longer than four charecters.
-void putch(char letter){
-    
-    if(letter == '\r'){
-        TABVALUE = 0;
-    } else {
-    
-        TM1650_setDigit(TABVALUE, letter, 0);
-        TABVALUE++;
-        if(TABVALUE == 4){
-            TABVALUE = 0;
-            //This delay allows reading of 4 chars at a time
-            __delay_ms(100000);
-        }
-    }
-    
-}
+//
+////This is the function this is used for printf. This checks for \r and that we are not writing off teh display
+////This allows for writing strings longer than four charecters.
+//void putch(char letter){
+//    
+//    if(letter == '\r'){
+//        TABVALUE = 0;
+//    } else {
+//    
+//        TM1650_setDigit(TABVALUE, letter, 0);
+//        TABVALUE++;
+//        if(TABVALUE == 4){
+//            TABVALUE = 0;
+//            //This delay allows reading of 4 chars at a time
+//            __delay_ms(100000);
+//        }
+//    }
+//    
+//}
 
 //Simple clear display function
 void clearDisplay(void){
