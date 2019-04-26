@@ -80,14 +80,13 @@ void main(void)
 
     INTERRUPT_PeripheralInterruptEnable();
     
-    __delay_ms(500);
+    __delay_ms(1000);
     TM1650_init();
     
     BUTTONS_init();
     CONTROLLER_init();
     LED_init();
     BEAT_init();
-    TRISC5 = 0; 
     
     while(1)
     {
